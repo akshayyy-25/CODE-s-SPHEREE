@@ -1,0 +1,2048 @@
+<html>
+
+<head>
+    <title>
+        OBJECT ORIENTED PROGRAMING
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">PRACTICE QUESTION</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">OBJECT ORIENTED PROGRAMING</h1>
+    <p class="note">Here are 31 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+    <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="1">
+                    <li>
+                        <h3>
+                            Write a Java program to create a class called "Person" with a name and age attribute. Create
+                            two instances of the "Person" class, set their attributes using the constructor, and print
+                            their name and age.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class person{
+string name;
+int age;
+public:
+person(){
+name="prachi";
+age=18;
+cout<<"name is: "<<name<<endl;
+cout<<"age is: "<<age<<endl;
+}
+};
+int main(){
+person obj;
+
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>
+                            Write a Java program to create a class called "Dog" with a name and breed attribute.
+                            Create two instances of the "Dog" class, set their attributes using the constructor and
+                            modify the attributes using the setter methods and print the updated values.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+# include<iostream>
+#include<string>
+using namespace std;
+class dog{
+    string name;
+    string breed;
+
+    public:
+    dog(){
+        name="bella";
+        breed="shitzu";
+    }
+    void set_name(string n){
+       name=n;
+    }
+    string get_name(){
+        return name;
+    }
+    void set_breed(string b){
+        breed=b;
+    }
+    string get_breed(){
+        return breed;
+    }
+    
+};
+int main(){
+    dog obj1,obj2;
+    obj1.set_name("coco");
+    obj1.set_breed("pitbull");
+        obj2.set_name("shiro");
+    obj2.set_breed("shitzu");
+cout<<obj1.get_breed()<<endl;
+cout<<obj1.get_name()<<endl;
+cout<<obj2.get_breed()<<endl;
+cout<<obj2.get_name()<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question3-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Rectangle" with width and height attributes.
+                            Calculate the area and perimeter of the rectangle.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+# include<iostream>
+using  namespace std;
+class rectangle{
+int h1;
+int w1;
+
+public:
+
+void set_h1(int h){
+h1=h;
+}
+int get_h1(){
+    return h1;
+}
+void set_w1(int w){
+    w1=w;
+}
+int get_w1(){
+    return w1;
+}
+int area(){
+return w1*h1;
+}
+int peri(){
+    return 2*(w1+h1);
+}
+};
+int main(){
+    rectangle obj1;
+    obj1.set_h1(20);
+    obj1.set_w1(20);
+    // cout<<obj1.get_h1()<<endl;
+    // cout<<obj1.get_w1()<<endl;
+    cout<<"area is: "<<obj1.area()<<endl;
+    cout<<"perimeter is: "<<obj1.peri()<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Circle" with a radius attribute. You can
+                            access and modify this attribute. Calculate the area and circumference of the circle.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class circle{
+int r1;
+public:
+void set_r1(int r){
+r1=r;
+}
+int ge_r1(){
+    return r1;
+}
+int circum(){
+    return 2*22/7*r1;
+}
+int area(){
+    return 22/7*r1*r1;
+}
+};
+int main(){
+    circle obj1;
+    obj1.set_r1(3);
+    cout<<obj1.area()<<endl;
+    cout<<obj1.circum()<<endl;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Book" with attributes for title, author, and
+                            ISBN, and methods to add and remove books from a collection.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class book{
+    string author;
+    string author2;
+    int ISBN;
+    int ISBN2;
+    string title;
+    string title2;
+    public:
+ void set_author(string a){
+    author=a;
+ }
+ string get_author(){
+    return author;
+ }
+  void set_author2(string a2){
+    author2=a2;
+ }
+ string get_author2(){
+    return author2;
+ }
+
+ void set_ISBN(int i){
+    ISBN=i;
+ }
+ int get_ISBN(){
+    return ISBN;
+ }
+  void set_ISBN2(int i2){
+    ISBN2=i2;
+ }
+ int get_ISBN2(){
+    return ISBN2;
+ }
+ void set_title(string t){
+    title=t;
+ }
+ string get_title(){
+    return title;
+ }
+  void set_title2(string t2){
+    title2=t2;
+ }
+ string get_title2(){
+    return title2;
+ }
+
+
+};
+int main(){
+    book b1;
+    b1.set_author("prachi phulara");
+    b1.set_author2("prachi phulara2");
+    b1.set_title("shikawt");
+     b1.set_title2("shikawt2");
+    b1.set_ISBN(98971);
+    b1.set_ISBN2(989712);
+    cout<<b1.get_author()<<" "<<b1.get_author2()<<endl;
+    cout<<b1.get_ISBN()<<" "<<b1.get_ISBN2()<<endl;
+    cout<<b1.get_title()<<" "<<b1.get_title2()<<endl;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Employee" with a name, job title, and salary
+                            attributes, and methods to calculate and update salary.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class employee{
+    string name;
+    string jobtitle;
+    int salary;
+    public:
+    void set_name(string n){
+        name=n;
+    }
+    string get_name(){
+        return name;
+    }
+    void set_jobtitle(string jt){
+        jobtitle=jt;
+
+    }
+    string get_jobtitle(){
+        return jobtitle;
+    }
+    void set_salary(int s){
+        salary=s;
+    }
+    int get_salary(){
+        return salary;
+    }
+    int calculate(){
+        return 12*salary;
+    }
+    int up_salary(){
+        return 10*(12*salary);
+    }
+};
+int main(){
+    employee obj1;
+    obj1.set_name("sarah");
+    obj1.set_jobtitle("teacher");
+    obj1.set_salary(20000);
+    cout<<"job is: "<<obj1.get_jobtitle()<<endl;
+     cout<<"salary is: "<<obj1.get_salary()<<endl;
+     cout<<"name is: "<<obj1.get_name()<<endl;
+     cout<<"anual salary: "<<obj1.calculate()<<endl;
+     cout<<"updated salary: "<<obj1.up_salary()<<endl;
+     
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Bank" with a collection of accounts and
+                            methods to add and remove accounts, and to deposit and withdraw money. Also define a class
+                            called "Account" to maintain account details of a particular customer.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class bank{
+int accnum;
+int md;
+int mw;
+public:
+void set_accnum(int an){
+    accnum=an;
+
+}
+int get_accnum(){
+    return accnum;
+}
+void set_md(int d){
+    md=d;
+
+}
+int get_md(){
+    return md;
+}
+void set_mw(int w){
+   mw=w;
+
+}
+int get_mw(){
+    return mw;
+}
+
+};
+
+class account{
+string name;
+int age;
+int mb;
+string address;
+public:
+
+void set_name(string n){
+    name=n;
+
+}
+string get_name(){
+    return name;
+}
+void set_age(int a){
+    age=a;
+}
+int get_age(){
+return age;
+}
+void set_address(string add){
+    address=add;
+}
+string get_address(){
+    return address;
+}
+};
+int main(){
+    bank obj1;
+    account a;
+    obj1.set_accnum(526348563653);
+    obj1.set_md(526);
+      obj1.set_mw(52);
+      cout<<obj1.get_accnum()<<endl;
+      cout<<obj1.get_md()<<endl;
+      cout<<obj1.get_mw<<endl;
+cout<<"---------details of customer---------";
+    a.set_name("prachi");
+    a.set_address("nayagoan");
+a.set_age(18);
+cout<<"name is: "<<a.get_name()<<endl;
+cout<<"address is: "<<a.get_address()<<endl;
+cout<<"age is: "<<a.get_age()<<endl;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question8-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="8">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "TrafficLight" with attributes for color and
+                            duration, and methods to change the color and check for red or green.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code8')">Show Code ></button>
+                <pre id="code8" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<string>
+using namespace std;
+class TrafficLight{
+int duration;
+string color;
+public:
+void set_duration(int d){
+    duration=d;
+}
+int get_duration(){
+    return duration;
+}
+void set_color(string c){
+color =c;
+}
+string get_color(){
+    return color;
+}
+void chng_color(string chng){
+    color=chng;
+}
+string get_chng_color(){
+    return color;
+}
+void check(){
+    if(color=="red"){
+        cout<<"color is red";
+    }
+    else if(color=="yellow"){
+        cout<<"color is yellow";
+    }
+    else if(color=="green"){
+        cout<<"color is green";
+    }
+}
+
+};
+int main(){
+TrafficLight t;
+t.set_duration(10);
+cout<<"duration is: "<<t.get_duration()<<endl;
+t.set_color("red");
+cout<<"color is: "<<t.get_color()<<endl;
+t.chng_color("green");
+cout<<"changed color is: "<<t.get_chng_color()<<endl;
+t.check();
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question9-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="9">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Employee" with a name, salary, and hire date
+                            attributes, and a method to calculate years of service.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code9')">Show Code ></button>
+                <pre id="code9" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class employee{
+    string name;
+    int salary;
+     int hdate;
+     int hmonth,hyear;
+
+     public:
+     void set_name(string n){
+        name=n;
+     }
+     string get_name(){
+        return name;
+     }
+     void set_salary(int s){
+        salary=s;
+     }
+     int get_salary(){
+        return salary;
+     }
+     void set_hdate(int hd){
+        hdate=hd;
+      }
+      int get_hdate(){
+        return hdate;
+      }
+     void set_hmonth(int hm){
+        hmonth=hm;
+      }
+      int get_hmonth(){
+        return hmonth;
+      }
+     void set_hyear(int hy){
+        hyear=hy;
+      }
+      int get_hyear(){
+        return hyear;
+      }
+      int calcu(){
+        return 2026-hyear;
+
+      }
+};
+int main(){
+    employee e1;
+    e1.set_name("prachi");
+    e1.set_salary(20000);
+    e1.set_hdate(12);
+    e1.set_hmonth(7);
+    e1.set_hyear(2000);
+    cout<<"name "<<e1.get_name();
+    cout<<"salary"<<e1.get_salary()<<endl;
+    cout<<"date of hire is: "<<e1.get_hdate()<<"-"<<e1.get_hmonth()<<"-"<<e1.get_hyear()<<endl;
+ cout<<"years of services"<<e1.calcu();    
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question10-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="10">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Student" with a name, grade, and courses
+                            attributes, and methods to add and remove courses.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code10')">Show Code ></button>
+                <pre id="code10" style="display: none;">
+                <xmp>
+# include<iostream>
+# include<string>
+using namespace std;
+class student{
+string name;
+char grade;
+string courses;
+
+string name2;
+char grade2;
+string courses2;
+
+public:
+void set_name(string n){
+    name=n;
+
+}
+string get_name(){
+    return name;
+}
+void set_grade(char g){
+grade=g;
+}
+char get_grade(){
+    return grade;
+}
+void set_courses( string c){
+    courses=c;
+
+}
+string get_courses(){
+    return courses;
+}
+
+
+void set_name2(string n2){
+    name2=n2;
+
+}
+string get_name2(){
+    return name2;
+}
+void set_grade2(char g2){
+    grade2=g2;
+}
+char get_grade2(){
+    return grade2;
+}
+void set_courses2( string c2){
+    courses2=c2;
+
+}
+string get_courses2(){
+    return courses2;
+}
+};
+int main(){
+    student s1;
+    s1.set_name("sarah");
+    s1.set_grade('A');
+    s1.set_courses("bca");
+      s1.set_name2("prachi");
+    s1.set_grade2('A');
+    s1.set_courses2("bca");
+    cout<<s1.get_name()<<" "<<s1.get_name2()<<endl;
+     cout<<s1.get_grade()<<" "<<s1.get_grade2()<<endl;
+  cout<<s1.get_name()<<" "<<s1.get_name2()<<endl;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question11-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="11">
+                    <li>
+                        <h3>
+                            Create a class showing an example of default constructor.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code11')">Show Code ></button>
+                <pre id="code11" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class hello{
+    int a;
+    int x;
+    public:
+    hello(){
+cout<<"hello";
+    }
+};
+int main(){
+    hello obj1;
+    
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question12-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="12">
+                    <li>
+                        <h3>
+                            Create a class showing an example of parameterized constructor.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code12')">Show Code ></button>
+                <pre id="code12" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class hello{
+    int a;
+    int x;
+    public:
+    hello(int y){
+cout<<"hello";
+    }
+};
+int main(){
+    hello obj1(56);
+    
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question13-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="13">
+                    <li>
+                        <h3>
+                            Create a class showing an example of copy constructor.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code13')">Show Code ></button>
+                <pre id="code13" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class hello{
+    int a;
+    int x;
+    public:
+    hello(){
+cout<<"hello";
+    }
+    hello(hello &obj){
+        cout<<"helo2";
+    }
+};
+int main(){
+    hello obj1;
+    hello obj2=obj1;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question14-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="14">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Airplane" with a flight number, destination,
+                            and departure time attributes, and methods to check flight status and delay.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code14')">Show Code ></button>
+                <pre id="code14" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+class airpalne{
+    int fnumber;
+    string destination;
+    int dtime;
+    int dseconds;
+    int dminute;
+    public:
+    void set_fnumber(int fn){
+        fnumber=fn;
+    }
+    int get_fnumber(){
+        return fnumber;
+    }
+    void set_destination(string d){
+        destination=d;
+    }
+    string get_destination(){
+        return destination;
+    }
+    void set_dtime(int dt){
+        dtime=dt;
+    }
+    int get_dtime(){
+    return dtime;
+    }
+    void set_dseconds(int ds){
+        dseconds=ds;
+    }
+    int get_dseconds(){
+    return dseconds;
+    }
+    void set_dminute(int dm){
+        dminute=dm;
+    }
+    int get_dminute(){
+    return dminute;
+    }
+    void delay(int x){
+        if(x==0){
+            cout<<"flight is not delayed"<<endl;
+        }
+        else{
+            cout<<"flight is delayed by "<<x<<" minutes"<<endl;
+        }
+    }
+
+};
+int main(){
+    airpalne a1;
+    a1.set_fnumber(4765);
+    a1.set_destination("heuihfuie");
+    a1.set_dtime(21);
+    a1.set_dminute(15);
+a1.set_dseconds(24); 
+  cout<<"status is: "<<endl;
+    cout<<"flight number: "<<a1.get_fnumber()<<endl;
+    cout<<"flight destination: "<<a1.get_destination()<<endl;
+    cout<<"flight time: "<<a1.get_dtime()<<":"<<a1.get_dminute()<<":"<<a1.get_dseconds()<<endl;
+ a1.delay(20);
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question15-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="15">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "School" with attributes for students,
+                            teachers, and classes, and methods to add and remove students and teachers, and to create
+                            classes.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code15')">Show Code ></button>
+                <pre id="code15" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class school{
+int student;
+int teachers;
+int classes;
+public:
+void set_stu(int st){
+    student=st;
+}
+int get_stu(){
+    return student;
+}
+void set_teach(int t){
+    teachers=t;
+}
+int get_teach()
+{
+    return teachers;
+
+}
+void set_clas(int cl){
+    classes=cl;
+}
+int get_classes(){
+    return classes;
+}
+int add(){
+    student++;
+    teachers++;
+    classes++;
+}
+int remove(){
+    student--;
+    teachers--;
+    
+}
+};
+int main(){
+    school s1;
+    s1.set_stu(10);
+    s1.set_teach(4);
+    s1.set_clas(5);
+    cout<<" "<<s1.get_stu()<<endl;
+    cout<<" "<<s1.get_teach()<<endl;
+    cout<<" "<<s1.get_classes()<<endl;
+cout<<s1.add()<<endl;
+cout<<s1.remove()<<endl;
+
+return 0;
+
+
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question16-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="16">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Circle with a private instance variable
+                            radius. Provide public getter and setter methods to access and modify the radius variable.
+                            However, provide two methods called calculateArea() and calculatePerimeter() that return the
+                            calculated area and perimeter based on the current radius value.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code16')">Show Code ></button>
+                <pre id="code16" style="display: none;">
+                <xmp>
+# include <iostream>
+using namespace std;
+class circle{
+    int radius;
+    public:
+    void set_radius(int r){
+        radius=r;
+    }
+    int get_radius(){
+        return radius;
+    }
+    int calculatearea(){
+        return 3.14*radius*radius;
+    }
+    int calculateperimeter(){
+        return 2*3.14*radius;
+    }
+};
+int main(){
+circle c1;
+c1.set_radius(4);
+cout<<c1.get_radius()<<endl;
+cout<<c1.calculatearea()<<endl;
+cout<<c1.calculateperimeter()<<endl;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question17-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="17">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Student with private instance variables
+                            student_id, student_name, and grades. Provide public getter and setter methods to access and
+                            modify the student_id and student_name variables. However, provide a method called
+                            addGrade() that allows adding a grade to the grades variable while performing additional
+                            validation.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code17')">Show Code ></button>
+                <pre id="code17" style="display: none;">
+                <xmp>
+# include <iostream>
+using namespace std;
+class student{
+    int student_id;
+    string student_name;
+    string grades;
+    public:
+void set_stuname(string sn){
+    student_name=sn;
+}
+string get_name(){
+    return student_name;
+
+}
+void set_stuid(int sti){
+    student_id=sti;
+}
+int get_id(){
+    return student_id;
+}
+void set_grade(string g){
+    grades=g;
+}
+string get_grade(){
+    return grades;
+}
+};
+int main (){
+    student s1;
+    s1.set_stuname("riyaa");
+    s1.set_stuid(234);
+    s1.set_grade("A");
+    cout<<"student name is :"<<s1.get_name()<<endl;
+    cout<<"student id is :"<<s1.get_id()<<endl;
+    cout<<"student grade is :"<<s1.get_grade()<<endl;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question18-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="18">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Car with private instance variables
+                            company_name, model_name, year, and mileage. Provide public getter and setter methods to
+                            access and modify the company_name, model_name, and year variables. However, only provide a
+                            getter method for the mileage variable.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code18')">Show Code ></button>
+                <pre id="code18" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class car{
+    string company_name;
+    string model_name;
+    int year;
+   int  mileage;
+   public:
+   void set_compname(string cn){
+    company_name=cn;
+
+   }
+   string get_name(){
+    return company_name;
+   }
+   void set_modelname(string mn){
+    model_name=mn;
+   }
+   string get_modelname(){
+    return model_name;
+   }
+   void set_year(int y){
+    year=y;
+   }
+   int get_year(){
+    return year;
+   }
+void set_milege(int m){
+    mileage=m;
+}
+int get_milege(){
+    return mileage;
+}
+
+
+
+};
+int main(){
+    car c1;
+    c1.set_compname("ushaa");
+c1.set_modelname("k206");
+c1.set_year(2015);
+c1.set_milege(56356);
+cout<<"company name :"<<c1.get_name()<<endl;
+cout<<"model name :"<<c1.get_modelname()<<endl;
+cout<<"year :"<<c1.get_year()<<endl;
+cout<<" mileage :"<<c1.get_milege()<<endl;
+return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question19-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="19">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Employee with private instance variables
+                            employee_id, employee_name, and employee_salary. Provide public getter and setter methods to
+                            access and modify the id and name variables, but provide a getter method for the salary
+                            variable that returns a formatted string.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code19')">Show Code ></button>
+                <pre id="code19" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class employee{
+     int employee_id;
+     string employee_name;
+    string employee_salary;
+    public:
+    void set_emplid(int emp){
+        employee_id=emp;
+    }
+    int get_id(){
+        return employee_id;
+    }
+    void set_employname(string em){
+        employee_name=em;
+
+    }
+    string get_name(){
+        return employee_name;
+    }
+    void set_emplsalary(string es){
+        employee_salary=es;
+
+    }
+    string get_salary(){
+        return employee_salary;
+    }
+
+    
+};
+int main(){
+    employee e1;
+    e1.set_emplid(2677);
+    e1.set_employname("shikhaa");
+    e1.set_emplsalary("7895748375");
+    cout<<"employee id"<<e1.get_id()<<endl;
+    cout<<"employee name"<<e1.get_name()<<endl;
+    cout<<"employee salary"<<e1.get_salary()<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question20-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="20">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Rectangle with private instance variables
+                            length and width. Provide public getter and setter methods to access and modify these
+                            variables.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code20')">Show Code ></button>
+                <pre id="code20" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class rectangle{
+    int length;
+    int width;
+    public:
+    void set_length(int l){
+        length=l;
+    }
+    int get_length(){
+        return length;
+    }
+    void set_width(int w){
+        width=w;
+    }
+    int get_width(){
+        return width;
+    }
+};
+int main(){
+    rectangle r1;
+    r1.set_length(34);
+    r1.set_width(45);
+    cout<<"length is"<<r1.get_length()<<endl;
+    cout<<"width is"<<r1.get_width()<<endl;
+
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question21-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="21">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called BankAccount with private instance variables
+                            accountNumber and balance. Provide public getter and setter methods to access and modify
+                            these variables.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code21')">Show Code ></button>
+                <pre id="code21" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class bankaccount{
+    string account_name;
+    int balance;
+public:
+void set_name(string n){
+    account_name=n;
+}
+string get_name(){
+    return account_name;
+}
+void set_balance(int b){
+    balance=b;
+}
+int get_balance(){
+    return balance;
+}
+};
+int main(){
+    bankaccount ba;
+    ba.set_name("shreyaa");
+    ba.set_balance(434567);
+    cout<<"account name :"<<ba.get_name()<<endl;
+    cout<<"balance :"<<ba.get_balance()<<endl;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question22-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="22">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Person with private instance variables name,
+                            age. and country. Provide public getter and setter methods to access and modify these
+                            variables.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code22')">Show Code ></button>
+                <pre id="code22" style="display: none;">
+                <xmp>
+# include<iostream>
+using namespace std;
+class person{
+    string name;
+    int age;
+    string country;
+    public :
+    void  set_name(string n){
+        name=n;
+    }
+    string get_name(){
+        return name;
+    }
+     void  set_age(int a){
+        age=a;
+    }
+    int get_age(){
+        return age;
+    }
+     void  set_country(string c){
+        country=c;
+    }
+    string get_country(){
+        return country;
+    }
+};
+int main(){
+    person p1;
+    p1.set_name("hanaya");
+    p1.set_age(34);
+    p1.set_country("india");
+    cout<<"person name is :"<<p1.get_name()<<endl;
+    cout<<"person age is :"<<p1.get_age()<<endl;
+    cout<<"person coutry is :"<<p1.get_country()<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question23-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="23">
+                    <li>
+                        <h3>
+                            Create a class showing the area of circle and rectangle by method overloading.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code23')">Show Code ></button>
+                <pre id="code23" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+class ShapeArea {
+public:
+    
+    void area(int radius) {
+        int result = 3.14159 * radius * radius;
+        cout << "Area of Circle: " << result << endl;
+    }
+
+    
+    void area(int length,int breadth) {
+        int result = length * breadth;
+        cout << "Area of Rectangle: " << result << endl;
+    }
+};
+
+int main() {
+    ShapeArea obj;
+
+    obj.area(7.0);        
+    obj.area(5.0, 3.0);  
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question24-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="24">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class with methods to search for flights and hotels, and
+                            to book and cancel reservations.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code24')">Show Code ></button>
+                <pre id="code24" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+class ReservationSystem {
+public:
+    
+    void searchFlights(string source, string destination) {
+        cout << "Searching flights from " << source << " to " << destination << "...\n";
+        cout << "Flight found: AI101, Departure: 10:00 AM\n";
+    }
+
+    
+    void searchHotels(string city) {
+        cout << "Searching hotels in " << city << "...\n";
+        cout << "Hotel found: Grand Palace Hotel\n";
+    }
+
+    void bookReservation(string type, string name) {
+        cout << "Booking " << type << " for " << name << "...\n";
+        cout << type << " booked successfully!\n";
+    }
+
+    void cancelReservation(string type, string name) {
+        cout << "Cancelling " << type << " for " << name << "...\n";
+        cout << type << " cancelled successfully!\n";
+    }
+};
+
+int main() {
+    ReservationSystem system;
+
+    system.searchFlights("Delhi", "Mumbai");
+    system.searchHotels("Mumbai");
+
+    system.bookReservation("Flight", "John Doe");
+    system.bookReservation("Hotel", "John Doe");
+
+    system.cancelReservation("Flight", "John Doe");
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question25-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="25">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Inventory" with a collection of products and
+                            methods to add and remove products, and to check for low inventory.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code25')">Show Code ></button>
+                <pre id="code25" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class inventory{
+int qty,p_id;
+public:
+void set_qty(int q){
+    qty=q;
+}
+int get_qty(){
+    return qty;
+}
+void set_pid(int i){
+p_id=i;
+}
+int get_pid(){
+    return p_id;
+}
+
+void remove(){
+    p_id=0;
+    qty=0;
+    cout<<"collection removed "<<endl;
+}
+void check(){
+    if(qty<3){
+        cout<<"low-inventory"<<endl;
+    }
+    else{
+        cout<<"not low-inventory"<<endl;
+    }
+}
+};
+int main(){
+inventory i1,i2;
+i1.set_pid(1221);
+i1.set_qty(4);
+
+i2.set_pid(1219);
+i2.set_qty(2);
+
+cout<<"product id is: "<<i1.get_pid()<<endl;
+cout<<"product quantity is: "<<i1.get_qty()<<endl;
+i1.check();
+cout<<"product id is: "<<i2.get_pid()<<endl;
+cout<<"product quantity is: "<<i2.get_qty()<<endl;
+i2.check();
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question26-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="26">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "MusicLibrary" with a collection of songs and
+                            methods to add and remove songs, and to play a random song.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code26')">Show Code ></button>
+                <pre id="code26" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class MusicLibrary {
+    string song;
+public:
+    void addSong(string s){
+        song=s;
+        cout<<"Song added"<<endl;
+    }
+    void removeSong(){
+        song="";
+        cout<<"Song removed"<<endl;
+    }
+    void playSong(){
+        if(song!=""){
+            cout<<"Playing: "<<song<<endl;
+        }
+        else{
+            cout<<"No song to play"<<endl;
+    }
+}
+};
+int main(){
+    MusicLibrary m;
+    m.addSong("Song A");
+    m.playSong();
+    m.removeSong();
+    m.playSong();
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question27-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="27">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "School" with attributes for students,
+                            teachers, and classes, and methods to add and remove students and teachers, and to create
+                            classes.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code27')">Show Code ></button>
+                <pre id="code27" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class school {
+    int students;
+    int teachers;
+    int classes;
+public:
+    void set_data(int s,int t,int c){
+        students=s;
+        teachers=t;
+        classes=c;
+    }
+    int get_students(){
+        return students;
+    }
+    int get_teachers(){
+        return teachers;
+    }
+    int get_classes(){
+        return classes;
+    }
+    void add_student(){
+        students++;
+    }
+    void remove_student(){
+        if(students>0){
+            students--;
+        }
+    }
+    void add_teacher(){
+        teachers++;
+    }
+    void remove_teacher(){
+        if(teachers>0){
+            teachers--;
+    }
+}
+    int create_class(){
+        classes++;
+        return classes;
+    }
+    void remove(){
+        students=0;
+        teachers=0;
+        classes=0;
+        cout<<"data removed successfully"<<endl;
+    }
+};
+int main(){
+    school s1;
+    s1.set_data(10,5,2);
+    cout<<"Students: "<<s1.get_students()<<endl;
+    cout<<"Teachers: "<<s1.get_teachers()<<endl;
+    cout<<"Classes: "<<s1.get_classes()<<endl;
+    s1.add_student();
+    s1.add_teacher();
+    cout<<"\nAfter adding:\n";
+    cout<<"Students: "<<s1.get_students()<<endl;
+    cout<<"Teachers: "<<s1.get_teachers()<<endl;
+    cout<<"\nAfter creating class: "<<s1.create_class()<<endl;
+    cout<<"\nRemoving...\n";
+    s1.remove_student();
+    s1.remove_teacher();
+    cout<<"Students: "<<s1.get_students()<<endl;
+    cout<<"Teachers: "<<s1.get_teachers()<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question28-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="28">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class with methods to search for flights and hotels, and
+                            to book and cancel reservations.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code28')">Show Code ></button>
+                <pre id="code28" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class Travel {
+    string flight;
+    string hotel;
+public:
+    void searchFlight(string f){
+        flight=f;
+        cout<<"Flight found: "<<flight<<endl;
+    }
+    void searchHotel(){
+        hotel="Grand Hotel";
+        cout<<"Hotel found: "<<hotel<<endl;
+    }
+    void bookFlight(){
+        cout<<"Flight booked: "<<flight<<endl;
+    }
+    void cancelFlight(){
+        cout<<"Flight cancelled: "<<flight<<endl;
+    }
+    void bookHotel(){
+        cout<<"Hotel booked: "<<hotel<<endl;
+    }
+    void cancelHotel(){
+    cout<<"Hotel cancelled: "<<hotel<<endl;
+    }
+};
+int main(){
+    Travel t;
+    t.searchFlight("Flight 101");
+    t.bookFlight();
+    t.cancelFlight();
+    t.searchHotel();
+    t.bookHotel();
+    t.cancelHotel();
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question29-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="29">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Restaurant" with attributes for menu items,
+                            prices, and ratings, and methods to add and remove items, and to calculate average rating.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code29')">Show Code ></button>
+                <pre id="code29" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class Restaurant {
+    string item;
+    int price;
+    float rating;
+public:
+    void addItem(int p,int r,string i){
+        price=p;
+        rating=r;
+        item=i;
+    }
+    void removeItem(){
+        item="";
+    }
+    void avgRating(){
+        cout<<"Rating: "<<rating<<endl;
+    }
+    void show(){
+        if(item!="")
+            cout<<item<<"-"<<price<<endl;
+        else
+            cout<<"No item"<<endl;
+    }
+};
+int main() {
+    Restaurant r;
+    r.addItem(200,4.5,"pizza");
+    r.show();
+    r.avgRating();
+r.removeItem();
+r.show();
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question30-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="30">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Shape" with abstract methods for calculating
+                            area and perimeter, and subclasses for "Rectangle", "Circle", and "Triangle".
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code30')">Show Code ></button>
+                <pre id="code30" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class Shape {
+public:
+    virtual void area()=0;
+    virtual void perimeter()=0;
+};
+class Rectangle:public Shape{
+    int l,b;
+public:
+    void set(int x,int y){
+        l=x;
+        b=y;
+    }
+    void area(){
+        cout<<"Area of Rectangle: "<<l*b<<endl;
+    }
+    void perimeter(){
+        cout<<"Perimeter of Rectangle: "<<2*(l+b)<<endl;
+    }
+};
+class Circle:public Shape{
+    float r;
+public:
+    void set(float x){
+        r=x;
+    }
+    void area(){
+        cout<<"Area of Circle: "<<3.14*r*r<<endl;
+    }
+    void perimeter(){
+        cout<<"Perimeter of Circle: "<<2*3.14*r<<endl;
+    }
+};
+class Triangle:public Shape{
+    int a,b,c,h;
+public:
+    void set(int x,int y,int z,int height) {
+        a=x;
+        b=y;
+        c=z;
+        h=height;
+    }
+    void area(){
+        cout<<"Area of Triangle: "<<0.5*b*h<<endl;
+    }
+    void perimeter(){
+        cout<<"Perimeter of Triangle: "<<a+b+c<<endl;
+    }
+};
+int main() {
+    Rectangle r;
+    r.set(10, 5);
+    r.area();
+    r.perimeter();
+ Circle c;
+    c.set(7);
+    c.area();
+    c.perimeter();
+        Triangle t;
+    t.set(3, 4, 5, 6);
+    t.area();
+    t.perimeter();
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question31-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="31">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called "Movie" with attributes for title, director,
+                            actors, and reviews, and methods for adding and retrieving reviews
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code31')">Show Code ></button>
+                <pre id="code31" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class Movie {
+    string title,director;
+    string review1,review2;
+public:
+    void setData(){
+        title="Inception";
+        director="Nolan";
+    }
+    void addReviews(){
+        review1="Good";
+        review2="Excellent";
+    }
+    void showReviews(){
+        cout<<"Movie: "<<title<<endl;
+        cout<<"Director: "<<director<<endl;
+        cout<<"Reviews: "<<review1<<", "<<review2<<endl;
+    }
+};
+int main() {
+    Movie m;
+    m.setData();
+    m.addReviews();
+    m.showReviews();
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

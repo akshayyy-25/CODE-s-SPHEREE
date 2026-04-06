@@ -1,0 +1,1876 @@
+<html>
+
+<head>
+    <title>
+        SINGLE-DIMENSION ARRAY
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">PRACTICE QUESTIONS</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">SINGLE DIMENSION ARRAYS</h1>
+    <p class="note">Here are 45 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+    <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol>
+                    <li>
+                        <h3>Program to copy all elements of one array into another array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"array is: "<<endl;
+for(int i=1;i<=x;i++){
+cout<<arr[i]<<endl;
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>Program to find the frequency of each element in the array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+s#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"reversed array is: "<<endl;
+for(int i=x;i>=1;i--){
+cout<<arr[i]<<endl;
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question3-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>Program to left rotate the elements of an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+                    
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int arr2[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i]; 
+    arr2[i]=arr[i];
+}
+cout<<"copied array is: "<<endl;
+for(int i=1;i<=x;i++){
+cout<<arr2[i]<<endl;
+}
+
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>Enter an array from user and copy it into another array in reverse order?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int arr2[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i]; 
+    arr2[i]=arr[i];
+}
+cout<<"copied array is: "<<endl;
+for(int i=x;i>=1;i--){
+cout<<arr2[i]<<endl;
+}
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>Enter an array from user and print the number which is even ?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+ cout<<"enter the elements: ";
+    cin>>arr[i]; 
+}
+cout<<"even numbers are: "<<endl;
+for(int i=1;i<=x;i++){
+    if(i%2==0){
+        cout<<arr[i]<<endl;
+    }
+}
+
+
+    return 0;
+
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>Enter an array from user and print the number which is positive ?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+  int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+   cout<<"enter the elements: ";
+    cin>>arr[i]; 
+}
+cout<<"even numbers are: "<<endl;
+for(int i=1;i<=x;i++){
+    if(arr[i]>=0){
+        cout<<arr[i]<<endl;
+    }
+}
+
+return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>Enter an array from user and square all the values of array ?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+ int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+   cout<<"enter the elements: ";
+    cin>>arr[i]; 
+}
+cout<<"squre is: "<<endl;
+for(int i=1;i<=x;i++){
+    arr[i]=arr[i]*arr[i];
+}
+cout<<"square of the array is: "<<endl;
+for(int i=1;i<=x;i++){
+    cout<<arr[i]<<endl;
+}
+    return 0;
+
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question8-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="8">
+                    <li>
+                        <h3>Enter an array from user and find maximum and minimum value?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code8')">Show Code ></button>
+                <pre id="code8" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+int max=arr[1];
+int min=arr[1];
+for(int i=1;i<=x;i++){
+    if(arr[i]>max){
+        max=arr[i];
+    }
+    if(arr[i]<min){
+        min=arr[i];
+    }
+}
+cout<<"maximum value is: "<<max<<endl;
+cout<<"minimum value is: "<<min<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question9-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="9">
+                    <li>
+                        <h3>Enter an array from user and find the k-th smallest value?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code9')">Show Code ></button>
+                <pre id="code9" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x,k;
+    cout<<"enter the size of array: ";
+    cin>>x;
+    int arr[x];
+    for(int i=0;i<x;i++){
+      cout<<"enter the elements: ";
+        cin>>arr[i];
+    }
+    cout<<"enter value of k: ";
+    cin>>k;
+    for(int i=0;i<x-1;i++){
+        for(int j=0;j<x-i-1;j++){
+            if(arr[j] > arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    if(k>0 && k<=x){
+        cout<<"K-th smallest element is: "<<arr[k-1];
+    }
+        else{
+        cout<<"Invalid value of k";
+        }
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question10-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="10">
+                    <li>
+                        <h3>Enter an array from user and add all values ?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code10')">Show Code ></button>
+                <pre id="code10" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int add=0;
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=1;i<=x;i++){
+    add=add+arr[i];
+}
+cout<<"addtion is: "<<add;
+
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question11-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="11">
+                    <li>
+                        <h3>Enter an array from user and find the duplicate values?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code11')">Show Code ></button>
+                <pre id="code11" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+    for(int j=i+1;j<x;j++){
+    if(arr[i]==arr[j]){
+       cout<<"duplicate values are: "<<arr[i]<<endl;
+       break;
+    }
+}
+}
+
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question12-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="12">
+                    <li>
+                        <h3>Enter an array from user and remove the duplicate values and fill with zero?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code12')">Show Code ></button>
+                <pre id="code12" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+    for(int j=i+1;j<x;j++){
+    if(arr[i]==arr[j]){
+       arr[j]=0;
+    }
+}
+}
+  for(int i=0;i<x;i++){
+    cout<<arr[i];
+}
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question13-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="13">
+                    <li>
+                        <h3>Enter an array from user and count the duplicate values?<h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code13')">Show Code</button>
+                <pre id="code13" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int count=0;
+for(int i=0;i<x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+    for(int j=i+1;j<x;j++){
+    if(arr[i]==arr[j]){
+       count=arr[j];
+    }
+}
+}
+cout<<"no. of the duplicate values is: "<<endl;
+  cout<<count;
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question14-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="14">
+                    <li>
+                        <h3>Enter an array from user and print all possible combinations of the elements?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code14')">Show Code > </button>
+                <pre id="code14" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int count=0;
+for(int i=0;i<x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+    for(int j=i+1;j<x;j++){
+    cout<<arr[i]<<" "<<arr[j]<<endl;
+}
+}
+ 
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question15-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="15">
+                    <li>
+                        <h3>Enter an array from user and print all the palindrome numbers?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code15')">Show Code ></button>
+                <pre id="code15" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int count=0;
+for(int i=0;i<x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+  int num=arr[i];
+int y=num;
+int rev=0;
+int r;
+ while(num!=0){
+    r=num%10;
+    rev=rev*10+r;
+    num=num/10;
+ }
+
+ if(y==rev){
+    cout<<"palindromer number is: "<<y<<endl;
+ }
+}
+ 
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question16-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="16">
+                    <li>
+                        <h3>Enter two arrays from the user and check they are same or not?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code16')">Show Code ></button>
+                <pre id="code16" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int arr2[x];
+int count=0;
+for(int i=0;i<x;i++){
+    cout<<"enter the 1st array elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+    cout<<"enter the 2nd array elements: ";
+    cin>>arr2[i];
+}
+ for(int i=0;i<x;i++){
+if(arr[i]!=arr2[i]){
+   count++;
+}
+ }
+if(count==x){
+cout<<"both are same";
+}else{
+    cout<<"both are not same ";
+}
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question17-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="17">
+                    <li>
+                        <h3>Merge the two sorted arrays into one array but in sorted order?<h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code17')">Show Code ></button>
+                <pre id="code17" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x,y;
+cout<<"enter size of 1st array: ";
+cin>>x;
+cout<<"enter size of 2nd array: ";
+cin>>y;
+int arr[x];
+int arr2[y];
+int arr3[x+y];
+for(int i=0;i<x;i++){
+    cout<<"enter elements of 1st array: ";
+    cin>>arr[i];
+}
+for(int i=0;i<y;i++){
+    cout<<"enter elements of 2nd array: ";
+    cin>>arr2[i];
+}
+int i=0,j=0,k=0;
+while(i<x && j<y){
+    if(arr[i]<arr2[j]){
+        arr3[k]=arr[i];
+        i++;
+    }
+    else{
+        arr3[k]=arr2[j];
+        j++;
+    }
+    k++;
+}
+while(i<x){
+    arr3[k]=arr[i];
+    i++;
+    k++;
+}
+while(j<y){
+    arr3[k]=arr2[j];
+    j++;
+    k++;
+}
+cout<<"merged array: ";
+for(int i=0;i<x+y;i++){
+    cout<<arr3[i]<<" ";
+}
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question18-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="18">
+                    <li>
+                        <h3>Find the local minima in the array?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code18')">Show Code ></button>
+                <pre id="code18" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter array elements: ";
+    cin>>arr[i];
+}
+cout<<"local minima elements are: ";
+for(int i=1;i<x-1;i++){
+    if(arr[i]<arr[i-1]&&arr[i]<arr[i+1]){
+        cout<<arr[i]<<" ";
+    }
+}
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question19-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="19">
+                    <li>
+                        <h3>Find the local maxima in the array?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code19')">Show Code ></button>
+                <pre id="code19" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter array elements: ";
+    cin>>arr[i];
+}
+cout<<"local maxima elements are: ";
+for(int i=1;i<x-1;i++){
+    if(arr[i]>arr[i-1]&&arr[i]>arr[i+1]){
+        cout<<arr[i]<<" ";
+    }
+}
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question20-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="20">
+                    <li>
+                        <h3>
+                            Program to Find Smallest Number in an array
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code20')">Show Code ></button>
+                <pre id="code20" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, i;
+
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    int arr[n];
+
+    cout << "Enter " << n << " elements:\n";
+    for(i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int smallest = arr[0];  // assume first element is smallest
+
+    for(i = 1; i < n; i++) {
+        if(arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+
+    cout << "Smallest element is: " << smallest;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question21-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="21">
+                    <li>
+                        <h3>Program to copy all elements of one array into another array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code21')">Show Code ></button>
+                <pre id="code21" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+        int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int arr2[x];
+for(int i=0;i<x;i++){
+    cout<<"enter array elements: ";
+    cin>>arr[i];
+}
+cout<<"copied array is: "<<endl;
+for(int i=0;i<x;i++){
+    arr2[i]=arr[i];
+    cout<<arr2[i]<<" ";
+}
+
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question22-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="22">
+                    <li>
+                        <h3>Program to find the frequency of each element in the array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code22')">Show Code ></button>
+                <pre id="code22" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+        int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter array elements: ";
+    cin>>arr[i];
+}
+cout<<"frequency is: "<<endl;
+for(int i=0;i<x;i++){
+    int f=0;
+        for(int j=0;j<x;j++){ 
+            if(arr[i]==arr[j]){
+       f++; 
+        }
+    }
+    cout<<arr[i]<<"="<<f<<endl;
+}
+
+
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question23-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="23">
+                    <li>
+                        <h3>Program to left rotate the elements of an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code23')">Show Code ></button>
+                <pre id="code23" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"left rotate is: "<<endl;
+for(int i=x;i>=1;i--){
+cout<<arr[i]<<" ";
+}
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question24-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="24">
+                    <li>
+                        <h3>Program to print the duplicate elements of an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code24')">Show Code ></button>
+                <pre id="code24" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+int d;
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"duplicate values are: ";
+for(int i=0;i<x;i++){
+    if(arr[i]==arr[i]){
+         for(int j=i+1;j<x;j++){
+            if(arr[i]==arr[j]){
+        d=arr[i];
+        cout<<d<<endl;
+         }
+    }}
+}
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question25-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="25">
+                    <li>
+                        <h3>Program to print the elements of an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code25')">Show Code ></button>
+                <pre id="code25" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"elements of the array are: "<<endl;
+for(int i=1;i<=x;i++){
+cout<<arr[i]<<endl;
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question26-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="26">
+                    <li>
+                        <h3>Program to print the elements of an array in reverse order</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code26')">Show Code ></button>
+                <pre id="code26" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"reversed array is: "<<endl;
+for(int i=x;i>=1;i--){
+cout<<arr[i]<<endl;
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question27-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="27">
+                    <li>
+                        <h3>Program to print the elements of an array present on even position</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code27')">Show Code ></button>
+                <pre id="code27" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"elements present on the even position: "<<endl;
+for(int i=1;i<=x;i++){
+    if(i%2==0){
+     cout<<arr[i]<<endl;   
+    }
+
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question28-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="28">
+                    <li>
+                        <h3>Program to print the elements of an array present on odd position</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code28')">Show Code ></button>
+                <pre id="code28" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"elements present on the odd position: "<<endl;
+for(int i=1;i<=x;i++){
+    if(i%2!=0){
+     cout<<arr[i]<<endl;   
+    }
+
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question29-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="29">
+                    <li>
+                        <h3>Program to print the largest element in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code29')">Show Code ></button>
+                <pre id="code29" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+int l=arr[1];
+for(int i=1;i<=x;i++){
+    if(arr[i]>l){
+        l=arr[i];
+    }
+}
+cout<<"largest element is: "<<l<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question30-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="30">
+                    <li>
+                        <h3>Program to print the smallest element in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code30')">Show Code ></button>
+                <pre id="code30" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+int s=arr[1];
+for(int i=1;i<=x;i++){
+    if(arr[i]<s){
+        s=arr[i];
+    }
+}
+cout<<"smallest element is: "<<s<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question31-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="31">
+                    <li>
+                        <h3>Program to print the number of elements present in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code31')">Show Code ></button>
+                <pre id="code31" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int count;
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"number of elements in the array: "<<x;
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question32-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="32">
+                    <li>
+                        <h3>Program to print the sum of all the items of the array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code32')">Show Code ></button>
+                <pre id="code32" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+int sum=0;
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=1;i<=x;i++){
+    sum=arr[i]+sum;
+}
+cout<<"sum is: "<<sum;
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question33-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="33">
+                    <li>
+                        <h3>Program to right rotate the elements of an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code33')">Show Code ></button>
+                <pre id="code33" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"right rotate is: "<<endl;
+for(int i=x;i>=1;i--){
+cout<<arr[i]<<" ";
+}
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question34-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="34">
+                    <li>
+                        <h3>Program to sort the elements of an array in ascending order</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code34')">Show Code ></button>
+                <pre id="code34" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+    for(int j=i+1;j<x;j++){
+        if(arr[i]>arr[j]){
+            int t=arr[i];
+            arr[i]=arr[j];
+            arr[j]=t;
+        }
+    }
+}
+cout<<"ascending order: ";
+for(int i=0;i<x;i++){
+    cout<<arr[i]<<" ";
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question35-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="35">
+                    <li>
+                        <h3>Program to sort the elements of an array in descending order</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code35')">Show Code ></button>
+                <pre id="code35" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size for the array: ";
+    cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+    for(int j=i+1;j<x;j++){
+        if(arr[i]<arr[j]){
+            int t=arr[i];
+            arr[i]=arr[j];
+            arr[j]=t;
+        }
+    }
+}
+cout<<"descending order: ";
+for(int i=0;i<x;i++){
+    cout<<arr[i]<<" ";
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question36-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="36">
+                    <li>
+                        <h3>Program to Find 3rd Largest Number in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code36')">Show Code ></button>
+                <pre id="code36" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size of array: ";
+    cin>>x;
+    int arr[x];
+    for(int i=0;i<x;i++){
+        cout<<"enter the elements: ";
+        cin>>arr[i];
+    }
+    for(int i=0;i<x;i++){
+        for(int j=i+1;j<x;j++){
+            if(arr[i]>arr[j]){
+                int t=arr[i];
+                arr[i]=arr[j];
+                arr[j]=t;
+            }
+        }
+    }
+    cout<<"3rd largest element is: "<<arr[x-3];
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question37-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="37">
+                    <li>
+                        <h3>Program to Find 2nd Largest Number in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code37')">Show Code ></button>
+                <pre id="code37" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size of array: ";
+    cin>>x;
+    int arr[x];
+    for(int i=0;i<x;i++){
+        cout<<"enter the elements: ";
+        cin>>arr[i];
+    }
+    for(int i=0;i<x;i++){
+        for(int j=i+1;j<x;j++){
+            if(arr[i]>arr[j]){
+                int t=arr[i];
+                arr[i]=arr[j];
+                arr[j]=t;
+            }
+        }
+    }
+    cout<<"2nd largest element is: "<<arr[x-2];
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question38-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="38">
+                    <li>
+                        <h3>Program to print the largest element in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code38')">Show Code ></button>
+                <pre id="code38" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+int l=arr[1];
+for(int i=1;i<=x;i++){
+    if(arr[i]>l){
+        l=arr[i];
+    }
+}
+cout<<"largest element is: "<<l<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question39-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="39">
+                    <li>
+                        <h3>Program to Find 2nd Smallest Number in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code39')">Show Code ></button>
+                <pre id="code39" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"enter the size of array: ";
+    cin>>x;
+    int arr[x];
+    for(int i=0;i<x;i++){
+        cout<<"enter the elements: ";
+        cin>>arr[i];
+    }
+    for(int i=0;i<x;i++){
+        for(int j=i+1;j<x;j++){
+            if(arr[i]<arr[j]){
+                int t=arr[i];
+                arr[i]=arr[j];
+                arr[j]=t;
+            }
+        }
+    }
+    cout<<"2nd smallest element is: "<<arr[x-2];
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question40-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="40">
+                    <li>
+                        <h3>Program to Find Smallest Number in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code40')">Show Code ></button>
+                <pre id="code40" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+int s=arr[1];
+for(int i=1;i<=x;i++){
+    if(arr[i]<s){
+        s=arr[i];
+    }
+}
+cout<<"largest element is: "<<s<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question41-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="41">
+                    <li>
+                        <h3>Program to Remove Duplicate Element in an array
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code41')">Show Code ></button>
+                <pre id="code41" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"array is: "<<endl;
+for(int i=0;i<x;i++){
+    int c=0;
+    for(int j=i+1;j<x;j++){
+    if(arr[i]==arr[j]){
+     c++;
+    }
+}
+if(c==0){
+cout<<arr[i]<<endl;
+}
+}
+
+
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question42-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="42">
+                    <li>
+                        <h3>Program to Print Odd and Even Numbers from an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code42')">Show Code ></button>
+                <pre id="code42" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of the array: ";
+cin>>x;
+int arr[x];
+for(int i=0;i<x;i++){
+    cout<<"enter the array elements: ";
+    cin>>arr[i];
+}
+for(int i=0;i<x;i++){
+    if(arr[i]%2==0){
+        cout<<"even number are: "<<arr[i]<<endl;
+    }
+}
+cout<<"--------------------"<<endl;
+for(int i=0;i<x;i++){
+    if(arr[i]%2!=0){
+        cout<<"odd numbers are: "<<arr[i]<<endl;
+    }
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question43-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="43">
+                    <li>
+                        <h3>Write a C++ program to segregate all 0s on left side and all
+                            1s on right side of a given array of 0s and 1s</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code43')">Show Code ></button>
+                <pre id="code43" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+int y;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"array is: "<<endl;
+for(int i=1;i<=x;i++){
+if(arr[i]==0){
+    cout<<arr[i]<<" ";
+}
+}
+for(int i=1;i<=x;i++){
+if(arr[i]==1){
+    cout<<arr[i]<<" ";
+}
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question44-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="44">
+                    <li>
+                        <h3>Write a C++ program to print all unique element in an array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code44')">Show Code ></button>
+                <pre id="code44" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"unique numbers are: "<<endl;
+for(int i=1;i<=x;i++){
+    int count=0;
+    for(int j=1;j<=x;j++){
+if(arr[i]==arr[j]){ 
+ count++;
+}
+    }
+    if(count==1){
+        cout<<arr[i]<<" ";
+    }
+
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question45-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="45">
+                    <li>
+                        <h3>Write a C++ Program to Search Key Elements in an Array</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code45')">Show Code ></button>
+                <pre id="code45" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int x,c=0;
+int y;
+cout<<"enter the size of array: ";
+cin>>x;
+int arr[x];
+
+for(int i=1;i<=x;i++){
+    cout<<"enter the elements: ";
+    cin>>arr[i];
+}
+cout<<"\n enter key element : ";
+cin>>y;
+for(int i=0;i<x;i++){
+    if(arr[i]==y){
+        cout<<"key element is found: "<<arr[i]<<endl;
+        c++;
+    }
+}
+if(c==0){
+    cout<<"no key element found";
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

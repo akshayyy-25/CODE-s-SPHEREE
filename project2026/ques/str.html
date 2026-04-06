@@ -1,0 +1,1363 @@
+<html>
+
+<head>
+    <title>
+        STRINGS
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">PRACTICE QUESTIONS</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">STRINGS</h1>
+    <p class="note">Here are 27 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+
+            <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="1">
+                    <li>
+                        <h3>
+                            Program to Check Anagram
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    string str1, str2;
+
+    cout << "Enter first string: ";
+    cin >> str1;
+
+    cout << "Enter second string: ";
+    cin >> str2;
+    if (str1.length() != str2.length()) {
+        cout << "Not Anagrams";
+        return 0;
+    }
+
+    sort(str1.begin(), str1.end());
+    sort(str2.begin(), str2.end());
+    if (str1 == str2)
+        cout << "Anagrams";
+    else
+        cout << "Not Anagrams";
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+            <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>
+                            Program to Swapping Pair of Characters
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    string str;
+
+    cout << "Enter a string: ";
+    cin >> str;
+
+    for (int i = 0; i < str.length() - 1; i += 2) {
+        char temp = str[i];
+        str[i] = str[i + 1];
+        str[i + 1] = temp;
+    }
+
+    cout << "String after swapping pairs: " << str;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+            <!--question3-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>
+                            Program to Check if a String contains only digits?
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+    char str[100];
+    int i = 0;
+
+    cout << "Enter value: ";
+    cin >> str;
+
+    while (str[i] != '\0') {
+        if (str[i] < '0' || str[i] > '9') {
+            cout << "Not only digits";
+            return 0;
+        }
+        i++;
+    }
+
+    cout << "Only digits";
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+            <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>
+                            Program to perform Deep Copy for String?
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+    char a[100], b[100];
+    int i;
+
+    cout << "Enter string: ";
+    cin >> a;
+
+    for (i = 0; a[i] != '\0'; i++) {
+        b[i] = a[i];
+    }
+    b[i] = '\0';
+
+    cout << "Original: " << a << endl;
+    cout << "Copied: " << b << endl;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+            <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>
+                            Program to remove all occurrences of a given character from input String?
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100], ch;
+    int i, j = 0;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    cout << "Enter character to remove: ";
+    cin >> ch;
+
+    char result[100];
+
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] != ch) {
+            result[j] = str[i];
+            j++;
+        }
+    }
+
+    result[j] = '\0'; // end of string
+
+    cout << "String after removal: " << result;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+            <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>
+                            Program to Add Characters to a String
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100], ch;
+    int i, len = 0, pos;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    cout << "Enter character to add: ";
+    cin >> ch;
+
+    cout << "Enter position to insert (0-based index): ";
+    cin >> pos;
+
+    // Find length of string
+    while(str[len] != '\0') {
+        len++;
+    }
+
+    
+    for(i = len; i >= pos; i--) {
+        str[i + 1] = str[i];
+    }
+
+
+    str[pos] = ch;
+
+    cout << "String after adding character: " << str;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+            <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>
+                            Program to check whether a string is a Palindrome
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100];
+    int i, len = 0;
+    bool isPalindrome = true;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+  
+    while(str[len] != '\0') {
+        len++;
+    }
+
+    
+    for(i = 0; i < len / 2; i++) {
+        if(str[i] != str[len - i - 1]) {
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    if(isPalindrome)
+        cout << "String is Palindrome";
+    else
+        cout << "String is Not Palindrome";
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question8-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="8">
+                    <li>
+                        <h3>
+                            Program to Convert Enum to String
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code8')">Show Code ></button>
+                <pre id="code8" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+// Define enum
+enum Day { MON, TUE, WED, THU, FRI, SAT, SUN };
+
+string getDayName(Day d) {
+    switch(d) {
+        case MON: return "Monday";
+        case TUE: return "Tuesday";
+        case WED: return "Wednesday";
+        case THU: return "Thursday";
+        case FRI: return "Friday";
+        case SAT: return "Saturday";
+        case SUN: return "Sunday";
+        default: return "Invalid";
+    }
+}
+
+int main() {
+    Day d = WED;
+
+    cout << "Day is: " << getDayName(d);
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question9-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="9">
+                    <li>
+                        <h3>
+                           Program to count number of words in a String? 
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code9')">Show Code ></button>
+                <pre id="code9" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100];
+    int i, words = 0;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+  
+    for(i = 0; str[i] != '\0'; i++) {
+        // Check space and next char is not space or end
+        if(str[i] == ' ' && str[i+1] != ' ' && str[i+1] != '\0') {
+            words++;
+        }
+    }
+
+    if(str[0] != '\0') {
+        words++;
+    }
+
+    cout << "Number of words: " << words;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question10-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="10">
+                    <li>
+                        <h3>
+                            Program to count the total number of characters in a string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code10')">Show Code ></button>
+                <pre id="code10" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100];
+    int count = 0;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    while(str[count] != '\0') {
+        count++;
+    }
+
+    cout << "Total number of characters: " << count;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question11-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="11">
+                    <li>
+                        <h3>
+                            Program to count the total number of punctuation characters exists in a String
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code11')">Show Code ></button>
+                <pre id="code11" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100];
+    int i, count = 0;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] == '!' || str[i] == ',' || str[i] == '.' ||
+           str[i] == '?' || str[i] == ';' || str[i] == ':' ||
+           str[i] == '\'' || str[i] == '\"' || str[i] == '-') {
+            count++;
+        }
+    }
+
+    cout << "Total punctuation characters: " << count;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question12-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="12">
+                    <li>
+                        <h3>
+                            Program to count the total number of vowels and consonants in a string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code12')">Show Code ></button>
+                <pre id="code12" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100];
+    int i, vowels = 0, consonants = 0;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        // Check if character is alphabet
+        if((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {
+            
+            if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' ||
+               str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U') {
+                vowels++;
+            }
+            else {
+                consonants++;
+            }
+        }
+    }
+
+    cout << "Vowels: " << vowels << endl;
+    cout << "Consonants: " << consonants;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question13-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="13">
+                    <li>
+                        <h3>
+                            Program to determine whether a given string is palindrome
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code13')">Show Code ></button>
+                <pre id="code13" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100];
+    int i, len = 0;
+    bool isPalindrome = true;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    // Find length of string
+    while(str[len] != '\0') {
+        len++;
+    }
+
+    for(i = 0; i < len / 2; i++) {
+        if(str[i] != str[len - i - 1]) {
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    if(isPalindrome)
+        cout << "String is Palindrome";
+    else
+        cout << "String is Not Palindrome";
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question14-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="14">
+                    <li>
+                        <h3>
+                            Program to determine whether one string is a rotation of another
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code14')">Show Code ></button>
+                <pre id="code14" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char str1[100], str2[100], temp[200];
+
+    cout << "Enter first string: ";
+    cin.getline(str1, 100);
+
+    cout << "Enter second string: ";
+    cin.getline(str2, 100);
+
+  
+    if(strlen(str1) != strlen(str2)) {
+        cout << "Not a rotation";
+        return 0;
+    }
+
+    strcpy(temp, str1);
+    strcat(temp, str1);
+
+    if(strstr(temp, str2))
+        cout << "String is a rotation";
+    else
+        cout << "Not a rotation";
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question15-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="15">
+                    <li>
+                        <h3>
+                            Program to divide a string in 'N' equal parts.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code15')">Show Code ></button>
+                <pre id="code15" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char str[100];
+    int n, len, partSize, i, j;
+
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    cout << "Enter number of parts: ";
+    cin >> n;
+
+    len = strlen(str);
+
+    if(len % n != 0) {
+        cout << "String cannot be divided into equal parts";
+        return 0;
+    }
+
+    partSize = len / n;
+
+    cout << "Equal parts are:\n";
+
+    for(i = 0; i < len; i += partSize) {
+        for(j = i; j < i + partSize; j++) {
+            cout << str[j];
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question16-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="16">
+                    <li>
+                        <h3>
+                            Program to find all subsets of a string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code16')">Show Code ></button>
+                <pre id="code16" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+    string str;
+    cout << "Enter a string: ";
+    cin >> str;
+
+    int n = str.length();
+    int total = pow(2, n);
+
+    cout << "All subsets are:\n";
+
+    for (int i = 0; i < total; i++) {
+        string subset = "";
+
+        for (int j = 0; j < n; j++) {
+            // Check if jth bit is set
+            if (i & (1 << j)) {
+                subset += str[j];
+            }
+        }
+
+        cout << subset << endl;
+    }
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question17-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="17">
+                    <li>
+                        <h3>
+                            Program to find all the permutations of a string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code17')">Show Code ></button>
+                <pre id="code17" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+void permute(string str, int left, int right) {
+    if (left == right) {
+        cout << str << endl;
+    } else {
+        for (int i = left; i <= right; i++) {
+            
+            swap(str[left], str[i]);
+
+            permute(str, left + 1, right);
+
+            
+            swap(str[left], str[i]);
+        }
+    }
+}
+
+int main() {
+    string str;
+    cout << "Enter a string: ";
+    cin >> str;
+
+    cout << "All permutations are:\n";
+    permute(str, 0, str.length() - 1);
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+            <!--question18-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="18">
+                    <li>
+                        <h3>
+                            Program to find maximum and minimum occurring character in a string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code18')">Show Code ></button>
+                <pre id="code18" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str;
+    cout << "Enter a string: ";
+    getline(cin, str);
+
+    int freq[256] = {0};
+
+    for (int i = 0; i < str.length(); i++) {
+        freq[str[i]]++;
+    }
+
+    char maxChar, minChar;
+    int max = 0, min = str.length();
+
+    for (int i = 0; i < str.length(); i++) {
+      
+        if (str[i] == ' ')
+            continue;
+
+        if (freq[str[i]] > max) {
+            max = freq[str[i]];
+            maxChar = str[i];
+        }
+
+        if (freq[str[i]] < min && freq[str[i]] != 0) {
+            min = freq[str[i]];
+            minChar = str[i];
+        }
+    }
+
+    cout << "Maximum occurring character: " << maxChar 
+         << " (Frequency: " << max << ")" << endl;
+
+    cout << "Minimum occurring character: " << minChar 
+         << " (Frequency: " << min << ")" << endl;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+            <!--question19-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="19">
+                    <li>
+                        <h3>
+                            Program to find Reverse of the string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code19')">Show Code ></button>
+                <pre id="code19" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str;
+    cout << "Enter a string: ";
+    cin >> str;
+
+    string rev = "";
+
+    for (int i = str.length() - 1; i >= 0; i--) {
+        rev += str[i];
+    }
+    cout << "Reversed string: " << rev;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+            <!--question20-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="20">
+                    <li>
+                        <h3>
+                            Program to find the duplicate characters in a string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code20')">Show Code ></button>
+                <pre id="code20" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str;
+    cout << "Enter a string: ";
+    getline(cin, str);
+
+    int freq[256] = {0};
+
+    for (int i = 0; i < str.length(); i++) {
+        freq[str[i]]++;
+    }
+
+    cout << "Duplicate characters are:\n";
+    for (int i = 0; i < str.length(); i++)
+     {
+        if (freq[str[i]] > 1)
+         {
+            cout << str[i] << " ";
+            freq[str[i]] = 0; 
+        }
+    }
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question21-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="21">
+                    <li>
+                        <h3>
+                        Program to find the duplicate words in a string?    
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code21')">Show Code ></button>
+                <pre id="code21" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str[100];
+   
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+     
+    for(int i = 0; str[i] != '\0'; i++){
+        bool flag=false;
+        for(int j=0;j<i;j++){
+            if(str[i]==str[j]){ flag=true;
+            break;}
+    }
+    if(flag){
+        cout<<str[i]<<" is duplicate\n";
+    }
+    }
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question22-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="22">
+                    <li>
+                        <h3>
+                            Program to find the frequency of characters?
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code22')">Show Code ></button>
+                <pre id="code22" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main()
+{
+    
+    char str[100];
+    int freq[256] = {0};   
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        freq[str[i]]++;
+    }
+
+    cout << "\n Character Frequencies:\n";
+    for (int i = 0; i < 256; i++) {
+        if (freq[i] != 0) {
+            cout << (char)i << " = " << freq[i] << endl;
+        }
+    }
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+            <!--question23-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="23">
+                    <li>
+                        <h3>
+                            Program to find the largest and smallest word in a string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code23')">Show Code ></button>
+                <pre id="code23" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char str[200];
+    cout << "Enter a string: ";
+    cin.getline(str, 200);
+
+    int i = 0, len = 0;
+    int minLen = 1000, maxLen = 0;
+    char word[50], smallest[50], largest[50];
+
+    while (true)
+     {
+        
+        if (str[i] == ' ' || str[i] == '\0') {
+            word[len] = '\0';
+
+            if (len > 0) {
+                
+                if (len < minLen) {
+                    minLen = len;
+                    strcpy(smallest, word);
+                }
+
+                if (len > maxLen) {
+                    maxLen = len;
+                    strcpy(largest, word);
+                }
+            }
+
+            len = 0; 
+
+            if (str[i] == '\0')
+                break;
+        } 
+        else 
+        {
+            word[len++] = str[i];
+        }
+        i++;
+    }
+
+    cout << "\nSmallest word: " << smallest;
+    cout << "\nLargest word: " << largest;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--questioN24-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="24">
+                    <li>
+                        <h3>
+                            Program to find the longest repeating sequence in a string
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code24')">Show Code ></button>
+                <pre id="code24" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char str[100];
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
+
+    int n = strlen(str);
+    int maxLen = 0;
+    char longest[100] = "";
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            int k = 0;
+
+            while (str[i + k] == str[j + k] && (i + k) < n && (j + k) < n) {
+                k++;
+            }
+
+            if (k > maxLen) {
+                maxLen = k;
+                strncpy(longest, str + i, k);
+                longest[k] = '\0';
+            }
+        }
+    }
+
+    if (maxLen > 0)
+        cout << "\nLongest Repeating Sequence: " << longest;
+    else
+        cout << "\nNo repeating sequence found.";
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+            <!--question25-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="25">
+                    <li>
+                        <h3>
+                            Program to find the most repeated word in a text file
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code25')">Show Code ></button>
+                <pre id="code25" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <fstream>
+#include <map>
+using namespace std;
+
+int main() {
+    ifstream file("data.txt");  
+    string word;
+
+    map<string, int> freq;  
+
+    while (file >> word) 
+    {
+        freq[word]++;
+    }
+
+    file.close();
+
+    string maxWord;
+    int maxCount = 0;
+
+    for (auto it : freq) {
+        if (it.second > maxCount) {
+            maxCount = it.second;
+            maxWord = it.first;
+        }
+    }
+
+    cout << "Most repeated word: " << maxWord << endl;
+    cout << "Frequency: " << maxCount << endl;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question26-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="26">
+                    <li>
+                        <h3>
+                            Program to find the number of the words in the given text file
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code26')">Show Code ></button>
+                <pre id="code26" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    ifstream file("data.txt"); 
+    string word;
+    int count = 0;
+
+    while (file >> word) {
+        count++;
+    }
+
+    file.close();
+
+    cout << "Total number of words: " << count << endl;
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+            <!--question27-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="27">
+                    <li>
+                        <h3>
+                            Program to Get a Character From the Given String
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code27')">Show Code ></button>
+                <pre id="code27" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str;
+    int pos;
+
+    cout << "Enter a string: ";
+    getline(cin, str);
+
+    cout << "Enter position (starting from 0): ";
+    cin >> pos;
+
+    if (pos >= 0 && pos < str.length()) {
+        cout << "Character at position " << pos << " is: " << str[pos];
+    } else {
+        cout << "Invalid position!";
+    }
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

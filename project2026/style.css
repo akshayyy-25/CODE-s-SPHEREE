@@ -1,0 +1,97 @@
+/*home page card css*/
+body{
+    font-family: 'popins',sans-serif;
+}
+        .container{
+            width: 100%;
+            margin-bottom: 60px;
+            margin-top:60px;
+        }
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            background: #f5f5f5;
+            box-shadow: 0 4px 10px; rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width:60%;
+        }
+        .card:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgb(238, 166, 67);
+        }
+        .card img{
+            width: 35%;
+            border-radius: 10px;
+            margin-top: 0;
+        }
+        .gradient-text{
+        font-size: 50px;
+        font-weight: bold;
+        background: linear-gradient(to right, #f5a72a, #5d2bf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }   
+        .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background: #f8e5c3;
+        }
+        
+
+        .logo{
+        color: rgb(7, 7, 7);
+         font-size: 28px;
+        font-weight: bold;
+        }
+
+        .navbar a{
+        color: rgb(250, 248, 248);
+        text-decoration: none;
+        margin-left: 30px;
+        font-size: 18px;
+    }
+            .navbar a:hover{
+        background-color: #070707;
+        border-radius: 5px;
+        }
+        .footer{
+        background:#fceacc;
+        color: rgb(29, 29, 30);
+        padding: 20px 40px;
+        margin-top: 50px;
+        }
+        .note {
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 400px;
+    color: #5d5959;
+    padding-bottom: 90px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+        margin: 0 auto;
+}
+.card a:hover {
+    transform: scale(1.1);
+    color:#5d2bf6;
+}
+
+a{
+    color: #f5a72a;
+    font-weight: bold;
+}

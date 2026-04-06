@@ -1,0 +1,945 @@
+<html>
+
+<head>
+    <title>
+        FILE HANDELING
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">pRACTICE QUESTION</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">FILE HANDELING</h1>
+    <p class="note">Here are 16 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+    <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="1">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a new text file and write some text into it.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+fstream f("file",ios::out);
+if(f.is_open()){
+    f<<"hello";
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>
+                            Write a C++ program to open an existing text file and display its contents on the console.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    char s;
+fstream f("file",ios::in);
+    if(f.is_open()){
+        while(!f.eof()){
+            s=f.get();
+             cout<<s;
+        }
+getline(f,s);
+    }
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question3-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>
+                            Write a C++ program to count the number of lines in a text file.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    char s;
+    int c=1;
+fstream f("file",ios::in);
+    if(f.is_open()){
+        while(!f.eof()){
+            s=f.get();
+             cout<<s;
+             if(s=='\n'){
+                c++;
+             }
+        }
+        cout<<"number of lines are: "<<c;
+    }
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>
+                            Write a C++ program to count the number of words in a text file.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    char s;
+fstream f("file",ios::in);
+    if(f.is_open()){
+         f.seekg(0,ios::end);
+      cout<<"number of words are: "<<f.tellg()<<endl;
+      f.seekg(0,ios::beg);
+        while(!f.eof()){
+            s=f.get();
+cout<<s;
+        }
+    }
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>
+                            Write a C++ program to copy the contents of one text file to another.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+fstream f("file",ios::in);
+fstream f2("file2",ios::out);
+char s;
+while(f.get(s)){
+    f2.put(s);
+}
+cout<<"data copied";
+f.close();
+f2.close();
+
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>
+                            Write a C++ program to find and replace a specific word in a text file.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+fstream f("file",ios::in|ios::out);
+char s;
+while(f.get(s)){
+    if(s=='.'){
+        f.seekp(-1, ios::cur); 
+        f.put('*');          
+    }
+} 
+    f.close();
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>
+                            Write a C++ program to append new data to an existing text file.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+fstream f("file",ios::app);
+if(f.is_open()){
+    f<<"hello";
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question8-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="8">
+                    <li>
+                        <h3>
+                            Write a C++ program to sort the lines of a text file in alphabetical order.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code8')">Show Code ></button>
+                <pre id="code8" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+string a[10],t;
+int i,j,n=0;
+fstream f("file",ios::in);
+if(f.is_open()){
+    while(getline(f,a[n])){
+    n++;
+}
+}
+f.close();
+for(i=0;i<n;i++){
+    for(j=i+1;j<n;j++){
+        if(a[i]>a[j]){ 
+            t=a[i];
+            a[i]=a[j];
+            a[j]=t;
+        }
+    }
+}
+fstream f2("file",ios::out);
+for(i=0;i<n;i++){
+    f2<<a[i]<<endl;
+}
+cout<<"data sorted sucessfully";
+f2.close();
+return 0;
+}  
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question9-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="9">
+                    <li>
+                        <h3>
+                            Write a C++ program to merge multiple text files into a single file.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code9')">Show Code ></button>
+                <pre id="code9" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+fstream f("file",ios::in);
+fstream f2("file2",ios::in);
+fstream f3("combined",ios::out);
+if(f.is_open()){
+char s;
+while(f.get(s)){
+    f3.put(s);
+}
+while(f2.get(s)){
+    f3.put(s);
+}
+
+cout<<"data merged";
+f.close();
+f2.close();
+f3.close();
+}
+    return 0;
+}
+    
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question10-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="10">
+                    <li>
+                        <h3>
+                            Write a C++ program to split a large text file into smaller files of equal size.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code10')">Show Code ></button>
+                <pre id="code10" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+fstream f("file",ios::out);
+fstream f2("file2",ios::in);
+fstream f3("combined",ios::in);
+if(f.is_open()){
+char s;
+while(f.get(s)){
+    f2.put(s);
+}
+while(f.get(s)){
+    f3.put(s);
+}
+
+cout<<"data merged";
+f.close();
+f2.close();
+f3.close();
+}
+    return 0;
+}
+   
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question11-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="11">
+                    <li>
+                        <h3>
+                            Write a C++ program to search for a specific string in a text file and display its line
+                            number(s).
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code11')">Show Code ></button>
+                <pre id="code11" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    string str;
+    int c=1;
+fstream f("file.txt",ios::in);
+if(f.is_open()){
+while(!f.eof()){
+   while( getline(f,str)){
+if(str=="my"){
+cout<<"line no is: "<<c<<endl;
+}
+c++;
+}    
+}}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question12-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="12">
+                    <li>
+                        <h3>
+                            Write a C++ program to encrypt the contents of a text file using a simple encryption
+                            algorithm.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code12')">Show Code ></button>
+                <pre id="code12" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    char ch;
+    string str;
+fstream f("file.txt",ios::in);
+if(f.is_open()){
+while(!f.eof()){
+    ch=f.get();
+    if(ch>=1&&ch<=32){
+        ch='1';
+    }
+    else if(ch>=97&&ch<=112){
+        ch=ch+1;
+    }
+    else if(ch>=65&&ch<=90){
+        ch=ch+1;
+    }
+  
+        cout<<ch;
+    
+}
+
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question13-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="13">
+                    <li>
+                        <h3>
+                            Write a C++ program to decrypt the contents of a text file encrypted using the above
+                            algorithm.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code13')">Show Code ></button>
+                <pre id="code13" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    char ch;
+    string str;
+fstream f("file.txt",ios::in);
+if(f.is_open()){
+while(!f.eof()){
+    ch=f.get();
+ if(ch=='1'){
+ch=32;
+ }
+    else if(ch>=97&&ch<=112){
+        ch=ch-1;
+    }
+    else if(ch>=65&&ch<=90){
+        ch=ch-1;
+    }
+  
+        cout<<ch;
+    
+}
+
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question14-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="14">
+                    <li>
+                        <h3>
+                            Write a C++ program to read a CSV file and display its contents in tabular form.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code14')">Show Code ></button>
+                <pre id="code14" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    char ch;
+    string str;
+fstream f("file.csv",ios::in);
+if(f.is_open()){
+while(!f.eof()){
+    ch=f.get();
+  if(ch==','){
+    ch='\t';
+  }
+  else if(ch=='\n'){
+    ch='\n';
+  }
+  cout<<ch;
+
+}
+}
+f.close();
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--question15-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="15">
+                    <li>
+                        <h3>
+                            Write a C++ program to calculate the average of numbers stored in a file.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code15')">Show Code ></button>
+                <pre id="code15" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+char ch;
+int y=0,count=0,avg=0;
+fstream f("file.txt",ios::in);
+if(f.is_open()){
+    while(!f.eof()){
+        ch=f.get();
+        if(ch>='0'&&ch<='9'){
+            y=y+(ch-'0');
+            count++;
+        }
+    }
+avg=y/count;
+cout<<avg;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--question16-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="16">
+                    <li>
+                        <h3>
+                            Write a C++ program to store the information of 10 Students having
+                            rollno,name,marks,mobileno properties, get() and set() member functions as binary file with
+                            following options 1. Insert Record 2. Delete Record 3. Update Record (based on rollno) 4.
+                            Search Record (based on rollno) 5. Clone the file 6. Exit.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code16')">Show Code ></button>
+                <pre id="code16" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class Student {
+    int rollno;
+    string name;
+    float marks;
+    string mobileno;
+
+public:
+    void get() {
+        cout << "Enter Roll No: ";
+        cin >> rollno;
+        cin.ignore();
+
+        cout << "Enter Name: ";
+        getline(cin, name);
+
+        cout << "Enter Marks: ";
+        cin >> marks;
+
+        cout << "Enter Mobile No: ";
+        cin >> mobileno;
+    }
+
+    void display() {
+        cout << "\nRoll No: " << rollno;
+        cout << "\nName: " << name;
+        cout << "\nMarks: " << marks;
+        cout << "\nMobile No: " << mobileno << endl;
+    }
+
+    int getRollNo() {
+        return rollno;
+    }
+
+    // Write object to binary file
+    void writeToFile(ofstream &out) {
+        size_t len;
+
+        out.write((char*)&rollno, sizeof(rollno));
+
+        len = name.size();
+        out.write((char*)&len, sizeof(len));
+        out.write(name.c_str(), len);
+
+        out.write((char*)&marks, sizeof(marks));
+
+        len = mobileno.size();
+        out.write((char*)&len, sizeof(len));
+        out.write(mobileno.c_str(), len);
+    }
+
+    // Read object from binary file
+    void readFromFile(ifstream &in) {
+        size_t len;
+        char *buffer;
+
+        in.read((char*)&rollno, sizeof(rollno));
+
+        in.read((char*)&len, sizeof(len));
+        buffer = new char[len + 1];
+        in.read(buffer, len);
+        buffer[len] = '\0';
+        name = buffer;
+        delete[] buffer;
+
+        in.read((char*)&marks, sizeof(marks));
+
+        in.read((char*)&len, sizeof(len));
+        buffer = new char[len + 1];
+        in.read(buffer, len);
+        buffer[len] = '\0';
+        mobileno = buffer;
+        delete[] buffer;
+    }
+};
+
+// Insert Record
+void insertRecord() {
+    ofstream file("students.dat", ios::binary | ios::app);
+    Student s;
+
+    s.get();
+    s.writeToFile(file);
+
+    file.close();
+    cout << "Record Inserted!\n";
+}
+
+// Display All
+void displayAll() {
+    ifstream file("students.dat", ios::binary);
+    Student s;
+
+    while (file.peek() != EOF) {
+        s.readFromFile(file);
+        s.display();
+    }
+
+    file.close();
+}
+
+// Search
+void searchRecord() {
+    ifstream file("students.dat", ios::binary);
+    Student s;
+    int roll;
+    bool found = false;
+
+    cout << "Enter Roll No: ";
+    cin >> roll;
+
+    while (file.peek() != EOF) {
+        s.readFromFile(file);
+        if (s.getRollNo() == roll) {
+            s.display();
+            found = true;
+            break;
+        }
+    }
+
+    if (!found)
+        cout << "Record Not Found!\n";
+
+    file.close();
+}
+
+// Delete
+void deleteRecord() {
+    ifstream file("students.dat", ios::binary);
+    ofstream temp("temp.dat", ios::binary);
+
+    Student s;
+    int roll;
+    bool found = false;
+
+    cout << "Enter Roll No to Delete: ";
+    cin >> roll;
+
+    while (file.peek() != EOF) {
+        s.readFromFile(file);
+        if (s.getRollNo() != roll) {
+            s.writeToFile(temp);
+        } else {
+            found = true;
+        }
+    }
+
+    file.close();
+    temp.close();
+
+    remove("students.dat");
+    rename("temp.dat", "students.dat");
+
+    if (found)
+        cout << "Deleted Successfully!\n";
+    else
+        cout << "Record Not Found!\n";
+}
+
+// Update
+void updateRecord() {
+    ifstream file("students.dat", ios::binary);
+    ofstream temp("temp.dat", ios::binary);
+
+    Student s;
+    int roll;
+    bool found = false;
+
+    cout << "Enter Roll No to Update: ";
+    cin >> roll;
+
+    while (file.peek() != EOF) {
+        s.readFromFile(file);
+        if (s.getRollNo() == roll) {
+            cout << "Enter New Data:\n";
+            s.get();
+            found = true;
+        }
+        s.writeToFile(temp);
+    }
+
+    file.close();
+    temp.close();
+
+    remove("students.dat");
+    rename("temp.dat", "students.dat");
+
+    if (found)
+        cout << "Updated Successfully!\n";
+    else
+        cout << "Record Not Found!\n";
+}
+
+// Clone File
+void cloneFile() {
+    ifstream src("students.dat", ios::binary);
+    ofstream dest("clone.dat", ios::binary);
+
+    dest << src.rdbuf();
+
+    cout << "File Cloned!\n";
+
+    src.close();
+    dest.close();
+}
+
+// Main
+int main() {
+    int choice;
+
+    do {
+        cout << "\n===== MENU =====\n";
+        cout << "1. Insert\n2. Delete\n3. Update\n4. Search\n5. Clone\n6. Display\n7. Exit\n";
+        cout << "Enter Choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: insertRecord(); break;
+            case 2: deleteRecord(); break;
+            case 3: updateRecord(); break;
+            case 4: searchRecord(); break;
+            case 5: cloneFile(); break;
+            case 6: displayAll(); break;
+            case 7: cout << "Exit...\n"; break;
+            default: cout << "Invalid!\n";
+        }
+
+    } while (choice != 7);
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+<html>
+
+<head>
+    <title>
+        MULTI-DIMENSION ARRAY
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+        <!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">PRACTICE QUESTIONS</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">MULTI-DIMENSION ARRAYS</h1>
+    <p class="note">Here are 11 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+    <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol>
+                    <li>
+                        <h3>Enter a matrix of 4 rows and 2 columns from the user display it in matrix format?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[4][2];
+cout<<"enter the 4x2 martix "<<endl;
+for(int i=0;i<4;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter the elements: ";
+    cin>>arr[i][j];
+}
+}
+cout<<"the 4x2 matrix is: "<<endl;
+for(int i=0;i<4;i++){
+    for(int j=0;j<2;j++){
+    cout<<arr[i][j]<<" ";
+}
+cout<<endl;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>Enter two Matrices from user, add the matrices and display the answer?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[2][2];
+int arr2[2][2];
+int add[2][2];
+cout<<"enter first martix "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter the elements: ";
+    cin>>arr[i][j];
+}
+}
+cout<<"enter second martix "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter the elements: ";
+    cin>>arr2[i][j];
+}
+}
+cout<<"addition is:  "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+add[i][j]=arr[i][j]+arr2[i][j];
+cout<<add[i][j]<<" ";
+}
+cout<<endl;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+        <!--question3-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>Enter two Matrices from user, subtract the matrices and display the answer?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[2][2];
+int arr2[2][2];
+int sub[2][2];
+cout<<"enter first martix "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter the elements: ";
+    cin>>arr[i][j];
+}
+}
+cout<<"enter second martix "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter the elements: ";
+    cin>>arr2[i][j];
+}
+}
+cout<<"subtraction is:  "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+sub[i][j]=arr[i][j]-arr2[i][j];
+cout<<sub[i][j]<<" ";
+}
+cout<<endl;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+        <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>Enter two Matrices from user, multiply the matrices and display the answer?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[2][2];
+int arr2[2][2];
+int mul[2][2];
+cout<<"enter first martix "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter the elements: ";
+    cin>>arr[i][j];
+}
+}
+cout<<"enter second martix "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter the elements: ";
+    cin>>arr2[i][j];
+}
+}
+cout<<"multiplication is:  "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+mul[i][j]=arr[i][j]*arr2[i][j];
+cout<<mul[i][j]<<" ";
+}
+cout<<endl;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+        <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>Enter a Matrix from user, copy it in another matrix of same size?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[2][2];
+int arr2[2][2];
+cout<<"enter first martix "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter the elements: ";
+    cin>>arr[i][j];
+}
+}
+cout<<"copied matrix is:  "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+arr2[i][j]=arr[i][j];
+cout<<arr2[i][j]<<" ";
+}
+cout<<endl;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+        <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>Enter the Matrix from user, multiply it with a scalar value and display the answer?</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[3][3]={0};
+int x;
+cout<<"enter number: ";
+cin>>x;
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        if(arr[i]==arr[j]){
+            arr[i][j]=x;
+        }
+        cout<<arr[i][j]<<" ";
+    }
+    cout<<endl;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+        <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>Program to determine whether two matrices are equal</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[2][2];
+int arr2[2][2];
+int c=0;
+cout<<"enter first matrix: "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter element: ";
+    cin>>arr[i][j]; 
+}
+}
+cout<<"enter second matrix: "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    cout<<"enter element: ";
+    cin>>arr2[i][j]; 
+}
+}
+
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+    if(arr[i][j]==arr2[i][j]){
+     c++;
+    }
+}
+}
+if(c==4){
+    cout<<"both are same";
+}
+else{
+    cout<<"both are not same";
+}
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+        <!--question8-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="8">
+                    <li>
+                        <h3>Program to display the lower triangular matrix</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code8')">Show Code ></button>
+                <pre id="code8" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[3][3];
+int x=0;
+cout<<"enter the martrix: "<<endl;
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        cout<<"ënter elements: ";
+        cin>>arr[i][j];
+    }
+}
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        if(arr[i]<arr[j]){
+            arr[i][j]=x;
+        }
+        cout<<arr[i][j]<<" ";
+    }
+    cout<<endl;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+        <!--question9-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="9">
+                    <li>
+                        <h3>Program to display the upper triangular matrix</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code9')">Show Code ></button>
+                <pre id="code9" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[3][3];
+int x=0;
+cout<<"enter the martrix: "<<endl;
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        cout<<"ënter elements: ";
+        cin>>arr[i][j];
+    }
+}
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        if(arr[i]<arr[j]){
+            arr[i][j]=x;
+        }
+        cout<<arr[i][j]<<" ";
+    }
+    cout<<endl;
+}
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+        <!--question10-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="10">
+                    <li>
+                        <h3>Program to find the frequency of odd & even numbers in the given matrix</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code10')">Show Code ></button>
+                <pre id="code10" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[2][2];
+int x=0,y=0;
+cout<<"enter the martrix: "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+        cout<<"enter elements: ";
+        cin>>arr[i][j];
+    }
+}
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+        if((arr[i][j])%2==0){
+            x++;
+        }   
+    }
+} 
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+        if((arr[i][j])%2!=0){
+            y++;
+        }   
+    }
+} 
+ cout<<"frequency of even number in the matrix is: "<<x<<endl;
+  cout<<"frequency of odd number in the matrix is: "<<y<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+        <!--question11-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="11">
+                    <li>
+                        <h3>Program to find the sum of each row and each column of a matrix</h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code11')">Show Code ></button>
+                <pre id="code11" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int main(){
+int arr[2][2];
+int x=0,y=0;
+cout<<"enter the martrix: "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+        cout<<"enter elements: ";
+        cin>>arr[i][j];
+    }
+}
+cout<<"matrix is: "<<endl;
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+        cout<<arr[i][j]<<" ";
+    }
+    cout<<endl;
+}
+for(int i=0;i<2;i++){
+   int j=0;
+        x=x+ arr[i][j];
+    
+} 
+for(int i=0;i<2;i++){
+    for(int j=0;j<2;j++){
+        y=y+arr[i][j];
+    }
+} 
+ cout<<"sum of rows is: "<<x<<endl;
+  cout<<"sum of column is: "<<y<<endl;
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

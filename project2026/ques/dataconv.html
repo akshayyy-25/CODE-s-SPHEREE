@@ -1,0 +1,744 @@
+<html>
+
+<head>
+    <title>
+        DATA CONVERSION
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">PRACTICE QUESTION</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">DATA CONVERSION</h1>
+    <p class="note">Here are 16 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+    <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="1">
+                    <li>
+                        <h3>
+                            C++ Program to convert String to int
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "12345";
+    int num = stoi(str);
+
+    cout << "String: " << str << endl;
+    cout << "Integer: " << num << endl;
+    cout << "String + 100 = " << num + 100 << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>
+
+
+                            C++ Program to convert String to int
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int num = 12345;
+    string str = to_string(num);
+
+    cout << "Integer: " << num << endl;
+    cout << "String: " << str << endl;
+    cout << "String length: " << str.length() << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question3-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>
+                            C++ Program to convert String to long
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "9876543210";
+    long num = stol(str);
+
+    cout << "String: " << str << endl;
+    cout << "Long: " << num << endl;
+    cout << "Long + 1000 = " << num + 1000 << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>
+                            C++ Program to convert long to String
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    long num = 9876543210L;
+    string str = to_string(num);
+
+    cout << "Long: " << num << endl;
+    cout << "String: " << str << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>
+                            C++ Program to convert String to float
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "3.14159";
+    float num = stof(str);
+
+    cout << "String: " << str << endl;
+    cout << "Float: " << num << endl;
+    cout << "Float * 2 = " << num * 2 << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>
+                            C++ Program to convert float to String
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    float num = 3.14159f;
+    string str = to_string(num);
+
+    cout << "Float: " << num << endl;
+    cout << "String: " << str << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>
+                            C++ Program to convert String to double
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "3.14159265358979";
+    double num = stod(str);
+
+    cout << "String: " << str << endl;
+    cout << "Double: " << num << endl;
+    cout << "Double * 2 = " << num * 2 << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question8-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="8">
+                    <li>
+                        <h3>
+                            C++ Program to convert double to String
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code8')">Show Code ></button>
+                <pre id="code8" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    double num = 3.14159265358979;
+    string str = to_string(num);
+
+    cout << "Double: " << num << endl;
+    cout << "String: " << str << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question9-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="9">
+                    <li>
+                        <h3>
+                            C++ Program to convert char to int
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code9')">Show Code ></button>
+                <pre id="code9" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char ch = 'A';
+    int num = (int)ch;
+
+    cout << "Character: " << ch << endl;
+    cout << "Integer (ASCII value): " << num << endl;
+
+    char ch2 = '5';
+    int num2 = ch2 - '0';
+    cout << "\nCharacter '5' to Integer: " << num2 << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question10-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="10">
+                    <li>
+                        <h3>
+                            C++ Program to convert int to char
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code10')">Show Code ></button>
+                <pre id="code10" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 65;
+    char ch = (char)num;
+
+    cout << "Integer: " << num << endl;
+    cout << "Character: " << ch << endl;
+
+    int num2 = 5;
+    char ch2 = num2 + '0';
+    cout << "\nInteger 5 to Character: " << ch2 << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question11-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="11">
+                    <li>
+                        <h3>
+                            C++ Program to convert Binary to Decimal
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code11')">Show Code ></button>
+                <pre id="code11" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int binaryToDecimal(long long binary) {
+    int decimal = 0;
+    int i = 0;
+
+    while (binary != 0) {
+        int remainder = binary % 10;
+        decimal += remainder * pow(2, i);
+        binary /= 10;
+        i++;
+    }
+
+    return decimal;
+}
+
+int main() {
+    long long binary;
+    cout << "Enter binary number: ";
+    cin >> binary;
+
+    int decimal = binaryToDecimal(binary);
+
+    cout << "Binary: " << binary << endl;
+    cout << "Decimal: " << decimal << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question12-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="12">
+                    <li>
+                        <h3>
+                            C++ Program to convert Decimal to Binary
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code12')">Show Code ></button>
+                <pre id="code12" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+void decimalToBinary(int n) {
+    int binary[32];
+    int i = 0;
+
+    while (n > 0) {
+        binary[i] = n % 2;
+        n = n / 2;
+        i++;
+    }
+
+    cout << "Binary: ";
+    for (int j = i - 1; j >= 0; j--) {
+        cout << binary[j];
+    }
+    cout << endl;
+}
+
+int main() {
+    int decimal;
+    cout << "Enter decimal number: ";
+    cin >> decimal;
+
+    cout << "Decimal: " << decimal << endl;
+    decimalToBinary(decimal);
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question13-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="13">
+                    <li>
+                        <h3>
+                            C++ Program to convert Hex to Decimal
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code13')">Show Code ></button>
+                <pre id="code13" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std;
+
+int hexCharToInt(char ch) {
+    if (ch >= '0' && ch <= '9')
+        return ch - '0';
+    else if (ch >= 'A' && ch <= 'F')
+        return ch - 'A' + 10;
+    else if (ch >= 'a' && ch <= 'f')
+        return ch - 'a' + 10;
+    return 0;
+}
+
+int hexToDecimal(char hex[]) {
+    int decimal = 0;
+    int len = strlen(hex);
+    int base = 1;
+
+    for (int i = len - 1; i >= 0; i--) {
+        decimal += hexCharToInt(hex[i]) * base;
+        base *= 16;
+    }
+
+    return decimal;
+}
+
+int main() {
+    char hex[20];
+    cout << "Enter hexadecimal number: ";
+    cin >> hex;
+
+    int decimal = hexToDecimal(hex);
+
+    cout << "Hexadecimal: " << hex << endl;
+    cout << "Decimal: " << decimal << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question14-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="14">
+                    <li>
+                        <h3>
+                            C++ Program to convert Decimal to Hex
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code14')">Show Code ></button>
+                <pre id="code14" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+void decimalToHex(int n) {
+    char hex[20];
+    int i = 0;
+
+    while (n != 0) {
+        int remainder = n % 16;
+
+        if (remainder < 10)
+            hex[i++] = remainder + '0';
+        else
+            hex[i++] = remainder - 10 + 'A';
+
+        n = n / 16;
+    }
+
+    cout << "Hexadecimal: ";
+    for (int j = i - 1; j >= 0; j--) {
+        cout << hex[j];
+    }
+    cout << endl;
+}
+
+int main() {
+    int decimal;
+    cout << "Enter decimal number: ";
+    cin >> decimal;
+
+    cout << "Decimal: " << decimal << endl;
+    decimalToHex(decimal);
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--question15-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="15">
+                    <li>
+                        <h3>
+                            C++ Program to convert Octal to Decimal
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code15')">Show Code ></button>
+                <pre id="code15" style="display: none;">
+                <xmp>
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int octalToDecimal(int octal) {
+    int decimal = 0;
+    int i = 0;
+
+    while (octal != 0) {
+        int digit = octal % 10;
+        decimal += digit * pow(8, i);
+        octal /= 10;
+        i++;
+    }
+
+    return decimal;
+}
+
+int main() {
+    int octal;
+    cout << "Enter octal number: ";
+    cin >> octal;
+
+    int decimal = octalToDecimal(octal);
+
+    cout << "Octal: " << octal << endl;
+    cout << "Decimal: " << decimal << endl;
+
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--question16-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="16">
+                    <li>
+                        <h3>
+                            C++ Program to convert Decimal to Octal
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code16')">Show Code ></button>
+                <pre id="code16" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+void decimalToOctal(int n) {
+    int octal[20];
+    int i = 0;
+
+    while (n > 0) {
+        octal[i] = n % 8;
+        n = n / 8;
+        i++;
+    }
+
+    cout << "Octal: ";
+    for (int j = i - 1; j >= 0; j--) {
+        cout << octal[j];
+    }
+    cout << endl;
+}
+
+int main() {
+    int decimal;
+    cout << "Enter decimal number: ";
+    cin >> decimal;
+
+    cout << "Decimal: " << decimal << endl;
+    decimalToOctal(decimal);
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

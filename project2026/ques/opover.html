@@ -1,0 +1,524 @@
+<html>
+
+<head>
+    <title>
+        OPERATOR OVERLOADING
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">PRACTICE QUESTION</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">OPERATOR OVERLOADING</h1>
+    <p class="note">Here are 8 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+    <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="1">
+                    <li>
+                        <h3>
+                            Define a class Complex to represent complex numbers. Overload the + operator to add two
+                            complex
+                            numbers.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+
+#include<iostream>
+using namespace std;
+
+class Complex {
+private:
+    float real, imag;
+
+public:
+    // Constructor
+    Complex(float r =0 , float i=0 ) {
+        real = r;
+        imag = i;
+    }
+
+     Operator overloading for +
+    Complex operator + (Complex c) {
+        Complex temp;
+        temp.real = real + c.real;
+        temp.imag = imag + c.imag;
+        return temp;
+    }
+
+     Function to display result
+    void display() {
+        cout << real << " + " << imag << "i" << endl;
+    }
+};
+
+int main() {
+    Complex c1(2, 9), c2(5, 5), c3;
+
+    c3 = c1 + c2;  // using overloaded + operator
+
+    cout << "Sum of complex numbers: ";
+    c3.display();
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>
+                            Create a class Fraction to represent fractions. Overload the + operator to add two
+                            fractions.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+
+
+#include<iostream>
+using namespace std;
+
+class Fraction{
+    float num;         //numenator
+    float den;         //denominator
+
+public:
+    Fraction(float n=0, float d=1 ){
+        num=n;
+        den=d;
+    }
+    Fraction operator +(Fraction  &obj){
+        Fraction temp;
+        temp.num = num*obj.den + obj.num*den;
+        temp.den = den*obj.den;
+
+        return temp;
+    }
+
+    void display(){
+        cout<<num<<"/"<<den<<endl;
+    }
+};
+
+
+int main(){
+    Fraction f1(2,6), f2(7,5),f3;
+    f3=f1+f2;
+
+    cout<<"Addtion of Both Fraction numbers are ";
+    f3.display();
+
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question13-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>
+                            Define a class Matrix to represent matrices. Overload the * operator to multiply two
+                            matrices.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+
+class Matrix {
+    int row;
+    int colm;
+    int arr[10][10];
+
+public:
+    void input() {
+        cout << "Enter number of rows: ";
+        cin >> row;
+        cout << "Enter number of columns: ";
+        cin >> colm;
+
+        cout << "Enter elements:\n";
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < colm; j++) {
+                cin >> arr[i][j];
+            }
+        }
+    }
+
+    void display() {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < colm; j++) {
+                cout << arr[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
+
+    Matrix operator*(Matrix obj) {
+        Matrix result;
+
+        if (colm != obj.row) {
+            cout << "Matrix multiplication not possible!\n";
+            return result;
+        }
+
+        result.row = row;
+        result.colm = obj.colm;
+
+        for (int i = 0; i < result.row; i++) {
+            for (int j = 0; j < result.colm; j++) {
+
+                result.arr[i][j] = 0;
+
+                for (int k = 0; k < colm; k++) {
+                    result.arr[i][j] += arr[i][k] * obj.arr[k][j];
+                }
+            }
+        }
+
+        return result;
+    }
+};
+
+int main() {
+    Matrix obj1, obj2, result;
+
+    obj1.input();
+    obj2.input();
+
+    result = obj1 * obj2;
+
+    cout << "Result matrix:\n";
+    result.display();
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>
+                            Implement a class String to represent strings. Overload the + operator to concatenate two
+                            strings.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<cstring>
+using  namespace std;
+
+class String {
+    char str[100];
+    
+
+    public:
+    String (){}
+    String (char s[]){
+        strcpy(str,s);
+    }
+    String operator +(String &obj){
+        String concat;
+       strcpy(concat.str,str);
+       strcat(concat.str,obj.str);
+        return concat;
+    }
+    void display(){
+        cout<<str<<endl;
+    }
+};
+
+int main(){
+    String obj3;
+    String obj1("Priyanshi chamola \0");
+    String obj2("Bisht \0");
+    obj3=obj1+obj2;
+    cout<<"Concated string is: ";
+    obj3.display();
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>
+                            Define a class Date to represent dates. Overload the < operator to compare two dates.
+                                </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+
+class Date{
+    int date;
+    int year;
+    int month;
+
+    public:
+    Date(int d, int m, int y){
+        date=d;
+        year=y;
+        month=m;
+    }
+void operator <(Date &obj){
+    if(date<obj.date && month<obj.month && year<obj.year){
+      cout<<"Yes 1st Date is Smaller then the 2nd one "<<endl;
+    }
+else{
+    cout<<"No 1st Date is not Smaller then the 2nd one "<<endl;
+} 
+}
+
+};
+
+int main(){
+    Date obj1(23,4,2004);
+    Date obj2(25,3,2004);
+
+    obj1<obj2;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>
+                            Implement a class Money to represent money. Overload the + operator to add two amounts of
+                            money.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+
+class Money{
+    int ruppes;
+    int paise;
+
+    public:
+    Money (){}
+    Money(int rp, int ps){
+        ruppes=rp;
+        paise=ps;
+    }
+
+   Money operator +(Money &obj){
+        Money res;
+        res.ruppes=ruppes+obj.ruppes;
+        res.paise=paise+obj.paise;
+        if(res.paise>=100){
+            res.ruppes += res.paise/100;
+            res.paise = res.paise%100;
+        }
+        return res;
+    }
+
+    void display(){
+        cout<<"Total Money is : "<<ruppes<<"."<<paise;
+    }
+};
+
+
+int main(){
+    Money obj1(2648,88);
+    Money obj2(3777,98);
+    Money obj3;
+    obj3=obj1+obj2;
+    obj3.display();
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>
+                            Create a class Rectangle to represent rectangles. Overload the == operator to check if two
+                            rectangles are equal.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+
+#include<iostream>
+using namespace std;
+
+class Rectangle{
+    int length;
+    int width;
+
+    public:
+    Rectangle(){}
+    Rectangle (int l, int w){
+        length=l;
+        width=w;
+    }
+
+    void operator ==(Rectangle &obj){
+if(length==obj.length && width==obj.width){
+    cout<<"Yes Both Rectangles are Equal.."<<endl;
+
+}
+else{
+    cout<<"No Rectangles are not Equal...."<<endl;
+}
+    }
+};
+
+int main(){
+    Rectangle obj1(22,99);
+    Rectangle obj2(22,89);
+    obj1==obj2;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question8-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="8">
+                    <li>
+                        <h3>
+                            Define a class Time to represent time. Overload the << operator to display the time in
+                                HH:MM format. </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code8')">Show Code ></button>
+                <pre id="code8" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+
+class Time{
+    int hour;
+    int minute;
+
+    public:
+    Time(int h, int m){
+        hour=h;
+        minute=m;
+    }
+
+    friend ostream& operator<<(ostream& out, Time t) {
+        if (t.hour < 10) out << "0";
+        out << t.hour << ":";
+
+        if (t.minute < 10) out << "0";
+        out << t.minute;
+
+        return out;
+    }
+};
+
+int main() {
+    Time t1(12,34);
+    cout << t1;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

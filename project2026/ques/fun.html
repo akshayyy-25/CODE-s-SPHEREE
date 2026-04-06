@@ -1,0 +1,346 @@
+<html>
+
+<head>
+    <title>
+        FUNCTIONS
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">PRACTICE QUESTIONS</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">FUNCTIONS</h1>
+    <p class="note">Here are 7 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+    <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="1">
+                    <li>
+                        <h3>
+                            Write a C++ method to find the smallest number among three numbers.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+void small(int s,int a,int b){
+    if(a<b){
+        if(a<s){
+            cout<<"smallest no is: "<<a<<endl;
+        }
+        else{
+            cout<<"smallest no is: "<<s<<endl;
+        }
+    }
+     if(b<a){
+if(b<s){
+    cout<<"smallest no is: "<<b<<endl;
+}
+else{
+    cout<<"smallest no is: "<<s<<endl;
+}
+    }
+}
+int main(){
+int x,y,z;
+cout<<"enter first number: ";
+cin>>x;
+cout<<"enter second number: ";
+cin>>y;
+cout<<"enter third number: ";
+cin>>z;
+small(x,y,z);
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>
+                            Write a C++ method to compute the average of three numbers.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+void avg(int c,int a,int b){
+    int avg=(a+b+c)/3;
+    cout<<"average is: "<<avg;
+}
+int main(){
+int x,y,z;
+cout<<"enter first number: ";
+cin>>x;
+cout<<"enter second number: ";
+cin>>y;
+cout<<"enter third number: ";
+cin>>z;
+avg(x,y,z);
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question3-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>
+                            Write a C++ method to display the middle character of a string.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<cstring>
+using namespace std;
+void avg(char a[]){
+    int l,m;
+    l=strlen(a);
+    m=l/2;
+    cout<<"middle character of the string is: "<<a[m];
+}
+int main(){
+char x[20];
+cout<<"enter the string ";
+cin>>x;
+avg(x);
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>
+                            Write a C++ method to find all twin prime numbers less than 100.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+void prime(){
+    for(int i=2;i<100;i++){
+int count=0;
+for(int j=1;j<=i;j++){
+    if(i%j==0)
+        count++;
+}
+int count2=0;
+for(int j=1;j<=i+2;j++){
+    if((i+2)%j==0)
+        count2++;
+}
+if(count==2&&count2==2){
+    cout<<i<<" "<<i+2<<endl;
+}
+}
+}
+int main(){
+    cout<<"twin prime numbers less than 100 are : "<<endl;
+    prime();
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>
+                            Write a C++ method to count the number of digits in an integer with the value 2.
+                            The integer may be assumed to be non-negative.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<cstring>
+using namespace std;
+int integer(char num[]){
+ int l,count=0;
+ l=strlen(num);
+ for(int i=0;i<l;i++){
+    if(num[i]=='2'){
+        count++;
+    }
+ }
+ return count;
+    
+}
+
+int main(){
+char ch[10];
+cout<<"enter a non-negative integer: ";
+cin>>ch;
+cout<<"the number of digits in an integer with the value 2 is: "<<integer(ch);
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>
+                            Write a C++ method that accepts three integers and checks whether they are consecutive or
+                            not.
+                            Returns true or false.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+void con(int a,int b,int c){
+    int p,p2;
+    p=a+1;
+p2=b+1;
+    if(b==p&&c==p2){
+        cout<<"true";
+    }
+    else {
+        cout<<"false";
+    }
+
+}
+
+int main(){
+    int x,y,z;
+    cout<<"enter 1st number: ";
+    cin>>x;
+    cout<<"enter 2nd number: ";
+    cin>>y;
+    cout<<"enter 3rd number: ";
+    cin>>z;
+    con(x,y,z);
+
+    return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>
+                            Write a C++ method that checks whether all the characters in a given string are vowels
+                            (a,e,i,o,u) or not.
+                            Return true if each character in the string is a vowel, otherwise return false.
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+#include<iostream>
+#include<cstring>
+using namespace std;
+void vowel(char ch[]){
+    int i,l,count=0;
+    l=strlen(ch);
+    for(i=0;i<l;i++){
+if((ch[i]!='a'&&ch[i]!='e'&&ch[i]!='i'&&ch[i]!='o'&&ch[i]!='u')){
+count=0;
+    }
+    else{
+        count++;
+    }
+    if((ch[i]!='A'&&ch[i]!='E'&&ch[i]!='I'&&ch[i]!='O'&&ch[i]!='U')){
+count=0;
+    }
+    else{
+        count++;
+    }
+}
+if(count!=0){
+    cout<<"true";
+}
+else{
+    cout<<"false";
+}
+}
+
+int main(){
+char str[10];
+cout<<"enter the string : ";
+cin>>str;
+vowel(str);
+    return 0;
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

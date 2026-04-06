@@ -1,0 +1,749 @@
+<html>
+
+<head>
+    <title>
+        INHERITENCE
+    </title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--header-->
+    <header class="header">
+        <div class="logo"><img src=""></div>
+
+        <nav class="navbar">
+            <a href="./home.html" class="gradient-text">HOME</a>
+            <a href="#" class="gradient-text">ABOUT</a>
+            <a href="./practicequestion.html" class="gradient-text">PRACTICE QUESTION</a>
+            <a href="#" class="gradient-text">Contact</a>
+        </nav>
+    </header>
+    <!--Top decoration-->
+    <h1 class="gradient-text" style="text-align: center; padding-top: 100;">INHERITENCE</h1>
+    <p class="note">Here are 10 practice question to help you master the funcdamental of C++ using
+        OBJECT ORIENTED PROGRAMING </p>
+
+
+    <!--question1-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="1">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Animal with a method called makeSound(). Create
+                            a derived class called Cat that overrides the makeSound() method to bark?
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code1')">Show Code ></button>
+                <pre id="code1" style="display: none;">
+                <xmp>
+#include <iostream>
+using namespace std;
+class Animal {
+public:
+    void makeSound() {
+        cout << "Animal makes a sound" << endl;
+    }
+};
+class Cat : public Animal
+ {
+public:
+    void makeSound()
+     {  
+        cout <<"Cat barks"<< endl;
+    }
+};
+int main()
+ {
+ Animal a;
+ Cat c;
+ a.makeSound();  
+ c.makeSound();
+ return 0;
+}
+
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question2-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="2">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Vehicle with a method called drive(). Create a
+                            derived class called Car that overrides the drive() method to print "Repairing a car"?
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code2')">Show Code ></button>
+                <pre id="code2" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class vehicle
+{
+    public:
+    void drive()
+    {
+        cout<<"driving a vehicle"<<endl;
+    }
+};
+class car:public vehicle
+{ 
+    public:
+    void drive()
+    {
+        cout<<"repairing a car"<<endl;
+        
+}
+};
+int main()
+{
+    vehicle a;
+    car c;
+    a.drive();
+    c.drive();
+    return 0;
+
+
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question3-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="3">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Shape with a method called getArea(). Create a
+                            derived class called Rectangle that overrides the getArea() method to calculate the area of
+                            a rectangle?
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code3')">Show Code ></button>
+                <pre id="code3" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int area,l,b;
+class shape
+{
+    public:
+    void getarea()
+    {
+        cout<<"area of rectangle"<<endl;
+    }
+};
+class rectangle:public shape
+{ 
+    public:
+    void getarea()
+    {
+        area= l*b;
+        cout<<area<<endl;
+        
+}
+};
+int main()
+{
+    cout<<"length ";
+    cin>>l;
+    cout<<"breadth";
+    cin>>b;
+    shape a;
+rectangle c;
+    a.getarea();
+    c.getarea();
+    return 0;
+
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question4-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="4">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Employee with methods called work() and
+                            getSalary(). Create a derived class called HRManager that overrides the work() method and
+                            adds a new method called addEmployee()?
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code4')">Show Code ></button>
+                <pre id="code4" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+
+class employee
+{
+    public:
+    void getsalary()
+    {
+        cout<<"salary is credited"<<endl;
+    }
+void work()
+{
+    cout<<"employee is working "<<endl;
+}
+};
+class HRmanager:public employee
+{ 
+    public:
+    void  work()
+    {
+        cout<<"hrmanager manager employee "<<endl;
+        
+}
+void  addemployee()
+    {
+        cout<<"new employee added "<<endl;
+        
+}
+};
+int main()
+{
+    employee a;
+HRmanager c;
+    c.getsalary();
+    c.work();
+    c.addemployee();
+    return 0;
+
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!--question5-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="5">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class known as "BankAccount" with methods called deposit()
+                            and withdraw(). Create a derived class called SavingsAccount that overrides the withdraw()
+                            method to prevent withdrawals if the account balance falls below one hundred.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code5')">Show Code ></button>
+                <pre id="code5" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+int i;
+class bankaccount
+{
+    public:
+    void deposit()
+    {
+        cout<<"money is deposted"<<endl;
+    }
+void withdraw()
+{
+    cout<<"money is withdraw "<<endl;
+}
+};
+class savingaccount:public bankaccount 
+{ 
+    public:
+    void  withdraw()
+    {
+        cout<<"withdraw"<<endl;   
+        for(i=100; i>100; i--)
+{
+cout<<"will not withdraw";
+}
+}
+};
+
+int main()
+{
+    bankaccount a;
+savingaccount c;
+    c.deposit();
+    c.withdraw();
+    
+    return 0;
+}
+
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question6-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="6">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Animal with a method named move(). Create a
+                            derived class called Cheetah that overrides the move() method to run.
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code6')">Show Code ></button>
+                <pre id="code6" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+class animal
+{
+    public:
+    void move()
+    {
+        cout<<"lion"<<endl;
+    }
+};
+class cheetah:public animal
+{ 
+    public:
+    void move()
+    {
+        cout<<"can run"<<endl;
+        
+    }
+};
+int main()
+{
+    animal a;
+    cheetah c;
+    a.move();
+    c.move();
+    return 0;
+
+
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question7-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="7">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class known as Person with methods called getFirstName() and
+                            getLastName(). Create a derived class called Employee that adds a new method named
+                            getEmployeeId() and overrides the getLastName() method to include the employee's job title1
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code7')">Show Code ></button>
+                <pre id="code7" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+
+class person
+{
+    public:
+    string a,b;
+    void getfirstname()
+    {
+        cout<<"enter firstname "<<endl;
+        cin>>a;
+    }
+void getlastname()
+{
+    cout<<"enter last name"<<endl;
+    cin>>b;
+}
+void displayn()
+{
+    cout << a;
+}
+};
+class employee:public person
+{ 
+    public:
+    int a;
+    string b;
+    void  getemployeeid()
+    {
+        cout<<"id of the employee"<<endl;
+        cin>>a;
+}
+void  getlastname()
+    {
+        cout<<" enter last name "<<endl;
+        cin>>b;
+}
+void display()
+{
+    cout << a << endl;
+    cout << b << endl;
+}
+};
+int main()
+{
+    person a;
+ employee c;
+    c.getfirstname();
+    c.getlastname();
+    c.getemployeeid();
+    c.displayn();
+    c.display();
+    return 0;
+
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question8-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="8">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a class called Shape with methods called getPerimeter() and
+                            getArea(). Create a derived class called Circle that overrides the getPerimeter() and
+                            getArea() methods to calculate the area and perimeter of a circle?
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code8')">Show Code ></button>
+                <pre id="code8" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+float area,perimeter,pi=3.14,r;
+class shape
+{
+    public:
+    void getarea()
+    {
+        cout<<"area of circle"<<endl;
+    }
+    void getperimeter()
+    {
+        cout<<"perimeter of circle"<<endl;
+    }
+};
+class circle:public shape
+{ 
+    public:
+    void getarea()
+    {
+        area= pi*r*r;
+        cout<<area<<endl;
+        
+}
+void getperimeter()
+{
+    perimeter=2*pi*r;
+    cout<<perimeter<<endl;
+}
+};
+int main()
+{
+    cout<<"radius of a circle ";
+    cin>>r;
+    
+ circle c; 
+    c.getarea();
+    c.getperimeter ();
+    return 0;
+
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--question9-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="9">
+                    <li>
+                        <h3>
+                            Write a C++ program to create a vehicle class hierarchy. The base class should be Vehicle,
+                            with derived classes Truck, Car and Motorcycle. Each derived class should have properties
+                            such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency,
+                            distance traveled, and maximum speed?
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code9')">Show Code ></button>
+                <pre id="code9" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+
+class vehicle
+{
+protected:
+ string make,model,fueltype;
+ int year;
+ public:
+ void setData(string mk,string md,string ft,int yr)
+{
+    make=mk;
+    model=md;
+    fueltype=ft;
+    year=yr;
+}
+void display()
+{
+    cout<<"make:"<<make<<endl;
+     
+        cout<<"model:"<<model<<endl;
+
+            cout<<"fueltype:"<<fueltype<<endl;
+
+                 cout<<"year:"<<year<<endl;
+}
+};
+
+class car :public vehicle
+{
+    public:
+void maxSpeed()
+{
+    cout<<"max speed : 180 km/h"<<endl;
+}
+};
+class truck: public vehicle
+{
+  public:
+void maxSpeed()
+{
+    cout<<"max speed : 120 km/h"<<endl;
+}
+};
+class motorcycle: public vehicle
+{
+  public:
+void maxSpeed()
+{
+    cout<<"max speed : 150 km/h"<<endl;
+}
+};
+
+int main()
+{
+    car c;
+    c.setData("Tata","punch","cng",2022);
+    cout<<"Car details:\n";
+    c.display();
+    c.maxSpeed();
+    cout<<"\n";
+
+
+    truck t;
+    t.setData("tata","heavytruck","diesel",2015);
+    cout<<"truck details\n";
+    t.display();
+    t.maxSpeed();
+    cout<<"\n";
+
+
+    motorcycle m;
+    m.setData("honda","shine","petrol",2023);
+cout<<"motorcycle details \n";
+m.display();
+m.maxSpeed();
+cout<<"\n";
+
+return 0;
+}
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--question10-->
+    <div class="container">
+        <div class="card">
+            <div class="text">
+                <ol start="10">
+                    <li>
+                        <h3>
+                            Write a C++ program that creates a class hierarchy for employees of a company. The base
+                            class should be Employee, with derived classes Manager, Developer, and Programmer. Each
+                            derived class should have properties such as name, address, salary, and job title. Implement
+                            methods for calculating bonuses, generating performance reports, and managing projects?
+
+                        </h3>
+                    </li>
+                </ol>
+                <button onclick="Code('code10')">Show Code ></button>
+                <pre id="code10" style="display: none;">
+                <xmp>
+#include<iostream>
+using namespace std;
+
+class employee
+{
+protected:
+ string name,address,jobtitle;
+ int salary;
+ public:
+ void setData(string n,string add,string jt,int sal)
+{
+    name=n;
+    address=add;
+    jobtitle =jt ;
+    salary=sal;
+}
+void display()
+{
+    cout<<"name:"<<name<<endl;
+     
+        cout<<"address:"<<address<<endl;
+
+            cout<<"jobtitle:"<<jobtitle<<endl;
+
+                 cout<<"salary:"<<salary<<endl;
+}
+};
+
+class manager :public employee
+{
+    public:
+void managerproject()
+{
+    cout<<"manager is managing project "<<endl;
+}
+void calculatebonus()
+{
+    cout<<"manager bonus :"<<salary*0.20<<endl;
+}
+};
+class developer: public employee
+{
+  public:
+void generatereport()
+{
+    cout<<"developer is generating report "<<endl;
+}
+void calculatebonus()
+{
+    cout<<"developer bonus :"<<salary*0.15<<endl;
+}
+};
+class programmer : public employee
+{
+  public:
+void writecode()
+{
+    cout<<"programmer is writing code "<<endl;
+}
+void calculatebonus()
+{
+    cout<<"programmer bonus :"<<salary*0.10<<endl;
+}
+};
+
+int main()
+{
+    manager m;
+    developer d;
+    programmer p;
+
+
+    cout<<" ...manager...:\n";
+    m.setData("priyanshi","uttrakhand","manager",500000);
+    m.display();
+    m.managerproject();
+m.calculatebonus();
+
+    cout<<"\n";
+
+
+
+    cout<<"...developer...\n";
+    d.setData("shagun","himachal","developer",400000);
+    d.display();
+    d.generatereport();
+    d.calculatebonus();
+
+    cout<<"\n...programmer...\n";
+    p.setData("srishti","uttrakhand","programmer",300000);
+    p.display();
+    p.writecode();
+p.calculatebonus();
+
+
+return 0;
+};
+                </xmp>
+            </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
